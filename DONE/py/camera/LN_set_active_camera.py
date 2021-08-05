@@ -5,6 +5,7 @@ class SetActiveCameraNode(ArmLogicTreeNode):
 
     @seeNode Get Active Camera
     """
+
     bl_idname = 'LNSetActiveCameraNode'
     bl_label = 'Set Active Camera'
     arm_version = 1

@@ -4,7 +4,9 @@ class SetCameraFovNode(ArmLogicTreeNode):
     """Sets the field of view (FOV) of the given camera.
 
     @seeNode Get Camera FOV
+    @seeNode Get Active Camera
     """
+
     bl_idname = 'LNSetCameraFovNode'
     bl_label = 'Set Camera FOV'
     arm_version = 1

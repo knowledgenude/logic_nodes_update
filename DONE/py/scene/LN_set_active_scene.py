@@ -1,7 +1,11 @@
 from arm.logicnode.arm_nodes import *
 
 class SetActiveSceneNode(ArmLogicTreeNode):
-    """Changes the current scene to another."""
+    """Changes the active scene.
+
+    @seeNode Get Active Scene
+    """
+
     bl_idname = 'LNSetActiveSceneNode'
     bl_label = 'Set Active Scene'
     arm_version = 1

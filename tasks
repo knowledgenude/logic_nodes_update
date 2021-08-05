@@ -1,3 +1,7 @@
 1. Change FOV nodes to use degrees, since most people isn't used to radians while talking about FOV
 2. Remake input map nodes to use action and axis separately
 3. Change "RB" references in nodes back to "Objects". I noticed this cause more confusion than before
+
+Notes:
+Review Set Parent Bone node, it doesn't looks that clear to use
+Need a way to specify start frame on play tilesheet node

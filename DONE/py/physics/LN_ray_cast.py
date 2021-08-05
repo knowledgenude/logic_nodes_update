@@ -17,6 +17,7 @@ class RayCastNode(ArmLogicTreeNode):
     @output Normal: the surface normal of the hit position relative to
         the world
     """
+
     bl_idname = 'LNRayCastNode'
     bl_label = 'Ray Cast'
     arm_section = 'ray'

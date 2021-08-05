@@ -5,7 +5,7 @@ import iron.object.Object;
 
 class SetActiveSceneNode extends LogicNode {
 
-	var root: Object;
+	var root: Null<Object>;
 
 	public function new(tree: LogicTree) {
 		super(tree);

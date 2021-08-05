@@ -1,5 +1,7 @@
 package armory.logicnode;
 
+import iron.Scene;
+
 class GetActiveCameraNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
@@ -7,6 +9,6 @@ class GetActiveCameraNode extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-		return iron.Scene.active.camera;
+		return Scene.active.camera;
 	}
 }
