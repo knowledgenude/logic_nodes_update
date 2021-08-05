@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class AlternateNode(ArmLogicTreeNode):
+class AlternateOutputNode(ArmLogicTreeNode):
     """Activates the outputs `0` and `1` alternating every time it is active.
     """
 
-    bl_idname = 'LNAlternateNode'
+    bl_idname = 'LNAlternateOutputNode'
     bl_label = 'Alternate Output'
     arm_section = 'flow'
     arm_version = 1
