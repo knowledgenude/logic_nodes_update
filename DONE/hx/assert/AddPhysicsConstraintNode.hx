@@ -111,9 +111,9 @@ class AddPhysicsConstraintNode extends LogicNode {
 			}
 
 			pivotObject.addTrait(con);
+
+			runOutput(0);
 		}
 		#end
-
-		runOutput(0);
 	}
 }
