@@ -4,7 +4,7 @@ class GetActiveSceneNode(ArmLogicTreeNode):
     """Returns the current scene.
 
     @seeNode Set Active Scene
-    @seeNode RemoveActiveScene
+    @seeNode Remove Active Scene
     """
 
     bl_idname = 'LNGetActiveSceneNode'
