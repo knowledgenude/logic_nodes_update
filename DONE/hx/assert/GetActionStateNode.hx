@@ -2,6 +2,9 @@ package armory.logicnode;
 
 import iron.object.Object;
 
+// This file was previously AnimationStateNode.hx and was renamed to be updated
+// Original author: luboslenco
+
 class GetActionStateNode extends LogicNode {
 
 	public function new(tree: LogicTree) {

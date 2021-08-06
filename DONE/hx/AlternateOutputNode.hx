@@ -1,5 +1,8 @@
 package armory.logicnode;
 
+// This file was previously AlternateNode.hx and was renamed to be updated
+// Original author: luboslenco
+
 class AlternateOutputNode extends LogicNode {
 
 	var b = true;

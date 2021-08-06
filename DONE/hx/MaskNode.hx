@@ -10,10 +10,12 @@ class MaskNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		var ret = 0;
+
 		for (v in 0...20) {
 			var bit: Bool = inputs[v].get();
 			if (bit) ret |= (1 << v);
 		}
+
 		return ret;
 	}
 

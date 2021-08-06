@@ -3,6 +3,12 @@ package armory.logicnode;
 import iron.math.Vec4;
 import armory.trait.physics.PhysicsWorld;
 
+/*
+ This file was previously CastPhysicsRayNode.hx and was renamed to be updated
+ Original author: luboslenco
+ Contributor(s): zicklag, marcgardent, N8n5h, rbx775
+*/
+
 class RayCastNode extends LogicNode {
 
 	public function new(tree: LogicTree) {

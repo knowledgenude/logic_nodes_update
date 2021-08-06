@@ -3,6 +3,9 @@ package armory.logicnode;
 import iron.Scene;
 import iron.object.Object;
 
+// This file was previously PlayActionFromNode.hx and was renamed to be updated
+// Original author: QuantumCoderQC
+
 class PlayActionNode extends LogicNode {
 
 	public function new(tree: LogicTree) {

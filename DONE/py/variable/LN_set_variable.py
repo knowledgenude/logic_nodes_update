@@ -8,6 +8,7 @@ class SetVariableNode(ArmLogicTreeNode):
         is stored inside the connected node is changed upon activation.
     @input Value: the value that should be written into the variable.
     """
+
     bl_idname = 'LNSetVariableNode'
     bl_label = 'Set Variable'
     arm_section = 'set'

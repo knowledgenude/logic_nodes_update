@@ -17,7 +17,12 @@ class OnActionMarkerNode extends LogicNode {
 		if (object == null) return;
 
 		var animation = object.animation;
-		if (animation == null) animation = object.getParentArmature(object.name);
+		if (animation == null) {
+			var a = object.getParentArmature(object.name);
+
+			if (a == null) return;
+			animation = object.getParentArmature(object.name);
+		}
 
 		animation.notifyOnMarker(marker, function() {
 			runOutput(0);
