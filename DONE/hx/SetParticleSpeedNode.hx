@@ -1,6 +1,9 @@
 package armory.logicnode;
 
 import iron.object.Object;
+#if arm_particles
+import iron.object.MeshObject;
+#end
 
 class SetParticleSpeedNode extends LogicNode {
 
@@ -15,7 +18,7 @@ class SetParticleSpeedNode extends LogicNode {
 
 		if (object == null) return;
 
-		var mo = cast(object, iron.object.MeshObject);
+		var mo = cast(object, MeshObject);
 
 		var psys = mo.particleSystems.length > 0 ? mo.particleSystems[0] : null;
 		if (psys == null) mo.particleOwner.particleSystems[0];

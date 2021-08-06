@@ -1,12 +1,14 @@
 package armory.logicnode;
 
 import iron.math.Vec4;
+#if arm_physics
 import armory.trait.physics.PhysicsWorld;
+#end
 
 /*
- This file was previously CastPhysicsRayNode.hx and was renamed to be updated
- Original author: luboslenco
- Contributor(s): zicklag, marcgardent, N8n5h, rbx775
+This file was previously CastPhysicsRayNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): zicklag, marcgardent, N8n5h, rbx775
 */
 
 class RayCastNode extends LogicNode {

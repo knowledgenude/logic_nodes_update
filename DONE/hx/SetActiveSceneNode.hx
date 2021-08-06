@@ -4,9 +4,9 @@ import iron.Scene;
 import iron.object.Object;
 
 /*
- This file was previously SetSceneNode.hx and was renamed to be updated
- Original author: luboslenco
- Contributor(s): MoritzBrueckner
+This file was previously SetSceneNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): MoritzBrueckner
 */
 
 class SetActiveSceneNode extends LogicNode {

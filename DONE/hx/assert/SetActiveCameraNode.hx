@@ -4,9 +4,9 @@ import iron.Scene;
 import iron.object.CameraObject;
 
 /*
- This file was previously SetCameraNode.hx and was renamed to be updated
- Original author: luboslenco
- Contributor(s): zicklag
+This file was previously SetCameraNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): zicklag
 */
 
 class SetActiveCameraNode extends LogicNode {

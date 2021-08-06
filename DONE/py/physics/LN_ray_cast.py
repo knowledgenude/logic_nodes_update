@@ -28,6 +28,6 @@ class RayCastNode(ArmLogicTreeNode):
         self.add_input('ArmVectorSocket', 'To')
         self.add_input('ArmIntSocket', 'Mask', default_value=1)
 
-        self.add_output('ArmNodeSocketObject', 'RB')
+        self.add_output('ArmNodeSocketObject', 'Object')
         self.add_output('ArmVectorSocket', 'Hit')
         self.add_output('ArmVectorSocket', 'Normal')
