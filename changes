@@ -1,0 +1,17 @@
+Was renamed:
+
+Alternate Output
+Get Active Camera
+Get Active Scene
+Set Active Scene
+Set Active Camera
+Get Action State
+Ray Cast
+Set World Gravity
+Get World Gravity
+Set Object Gravity Enabled
+Remove Rigid Body
+
+* Added missing compilation flag in physics nodes
+* Cleanups in .py files and .hx files
+* Renamed some inputs and returned "RB" references back to "Object"

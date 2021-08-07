@@ -12,7 +12,6 @@ class GetRigidBodyDataNode(ArmLogicTreeNode):
     def arm_init(self, context):
         self.inputs.new('ArmNodeSocketObject', 'Object')
 
-        self.outputs.new('ArmBoolSocket', 'Is Rigid Body')
         self.outputs.new('ArmIntSocket', 'Collision Group')
         self.outputs.new('ArmIntSocket', 'Collision Mask')
         self.outputs.new('ArmBoolSocket', 'Is Animated')
