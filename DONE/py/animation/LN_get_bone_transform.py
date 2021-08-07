@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class GetBoneTransformNode(ArmLogicTreeNode):
-    """Returns bone transform in world space.
-    """
+    """Returns bone transform in world space."""
 
     bl_idname = 'LNGetBoneTransformNode'
     bl_label = 'Get Bone Transform'

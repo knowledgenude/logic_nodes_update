@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class ApplyTorqueNode(ArmLogicTreeNode):
-    """Applies torque to the given rigid body.
-    """
+    """Applies torque to the given rigid body."""
 
     bl_idname = 'LNApplyTorqueNode'
     bl_label = 'Apply Torque'

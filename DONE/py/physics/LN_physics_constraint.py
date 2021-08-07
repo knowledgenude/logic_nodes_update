@@ -2,8 +2,7 @@ from arm.logicnode.arm_nodes import *
 
 
 class PhysicsConstraintNode(ArmLogicTreeNode):
-    """
-    Custom physics constraint to add to `Add Physics Constarint` node.
+    """Custom physics constraint to add to `Add Physics Constarint` node.
 
     @option Linear/Angualr: Select if constrint is applied along linear or angular axis.
 

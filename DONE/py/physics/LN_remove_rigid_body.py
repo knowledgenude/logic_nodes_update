@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class RemoveRigidBodyNode (ArmLogicTreeNode):
-    """Removes the rigid body from the given object.
-    """
+    """Removes the rigid body from the given object."""
 
     bl_idname = 'LNRemoveRigidBodyNode'
     bl_label = 'Remove Rigid Body'

@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class OnVolumeTriggerNode(ArmLogicTreeNode):
-    """Activates the output when the Object A enters, overlaps or leaves the bounding box of the Object B. (Note: Works even if objects are not Rigid Bodies).
-    """
+    """Activates the output when the Object A enters, overlaps or leaves the bounding box of the Object B. (Note: Works even if objects are not Rigid Bodies)."""
 
     bl_idname = 'LNOnVolumeTriggerNode'
     bl_label = 'On Volume Trigger'

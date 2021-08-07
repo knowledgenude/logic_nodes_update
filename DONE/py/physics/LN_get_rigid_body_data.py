@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class GetRigidBodyDataNode(ArmLogicTreeNode):
-    """Returns the data of the given rigid body.
-    """
+    """Returns the data of the given rigid body."""
 
     bl_idname = 'LNGetRigidBodyDataNode'
     bl_label = 'Get Rigid Body Data'

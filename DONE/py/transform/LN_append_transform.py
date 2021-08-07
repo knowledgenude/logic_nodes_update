@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class AppendTransformNode(ArmLogicTreeNode):
-    """Appends transform to the given object.
-    """
+    """Appends transform to the given object."""
 
     bl_idname = 'LNAppendTransformNode'
     bl_label = 'Append Transform'

@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class SetBoneFkIkOnlyNode(ArmLogicTreeNode):
-    """Set particular bone to be animated by Forward kinematics or Inverse kinematics only. All other animations will be ignored
-    """
+    """Set particular bone to be animated by Forward kinematics or Inverse kinematics only. All other animations will be ignored."""
 
     bl_idname = 'LNSetBoneFkIkOnlyNode'
     bl_label = 'Set Bone FK IK Only'

@@ -1,5 +1,10 @@
-1. Change FOV nodes to use degrees, since most people isn't used to radians while talking about FOV
-2. Remake input map nodes to use action and axis separately
+* Change FOV nodes to use degrees, since most people isn't used to radians while talking about FOV
+	* Add milimeters option to FOV nodes
+* Improve Is Null nodes
+* Remake input map nodes to use action and axis separately
+* Rename Canvas nodes
+* Rename array nodes
+* Rename input nodes
 
 Notes:
 Review Set Parent Bone node, it doesn't looks that clear to use

@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class GetBoneFkIkOnlyNode(ArmLogicTreeNode):
-    """Get if a particular bone is animated by Forward kinematics or Inverse kinematics only.
-    """
+    """Get if a particular bone is animated by Forward kinematics or Inverse kinematics only."""
 
     bl_idname = 'LNGetBoneFkIkOnlyNode'
     bl_label = 'Get Bone FK IK Only'

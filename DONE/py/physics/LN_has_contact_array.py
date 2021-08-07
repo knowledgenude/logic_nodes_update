@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class HasContactArrayNode(ArmLogicTreeNode):
-    """Returns whether exists contact between Object and the Objects in the list.
-    """
+    """Returns whether exists contact between Object and the Objects in the list."""
 
     bl_idname = 'LNHasContactArrayNode'
     bl_label = 'Has Contact Array'

@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class StringNode(ArmLogicTreeNode):
-    """Stores the given string as a variable.
-    """
+    """Stores the given string as a variable."""
 
     bl_idname = 'LNStringNode'
     bl_label = 'String'

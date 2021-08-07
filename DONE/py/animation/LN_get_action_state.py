@@ -2,6 +2,7 @@ from arm.logicnode.arm_nodes import *
 
 class GetActionStateNode(ArmLogicTreeNode):
     """Returns the information about the current action of the given object."""
+
     bl_idname = 'LNGetActionStateNode'
     bl_label = 'Get Action State'
     arm_version = 1

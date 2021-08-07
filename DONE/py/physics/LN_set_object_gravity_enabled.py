@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class SetObjectGravityEnabledNode(ArmLogicTreeNode):
-    """Sets whether the given object gravity is enabled.
-    """
+    """Sets whether the given object gravity is enabled."""
 
     bl_idname = 'LNSetObjectGravityEnabledNode'
     bl_label = 'Set Object Gravity Enabled'

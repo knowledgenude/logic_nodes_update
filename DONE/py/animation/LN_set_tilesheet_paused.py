@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class SetTilesheetPausedNode(ArmLogicTreeNode):
-    """Sets the tilesheet paused state of the given object.
-    """
+    """Sets the tilesheet paused state of the given object."""
 
     bl_idname = 'LNSetTilesheetPausedNode'
     bl_label = 'Set Tilesheet Paused'

@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class HasContactNode(ArmLogicTreeNode):
-    """Returns whether exists contact between Object A and Object B.
-    """
+    """Returns whether exists contact between Object A and Object B."""
 
     bl_idname = 'LNHasContactNode'
     bl_label = 'Has Contact'

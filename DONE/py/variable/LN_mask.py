@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class MaskNode(ArmLogicTreeNode):
-    """TO DO.
-    """
+    """Mask node."""
 
     bl_idname = 'LNMaskNode'
     bl_label = 'Mask'

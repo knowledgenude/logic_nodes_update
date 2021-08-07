@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class SetActionPausedNode(ArmLogicTreeNode):
-    """Sets whether the action of the given object is paused or not.
-    """
+    """Sets whether the action of the given object is paused or not."""
 
     bl_idname = 'LNSetActionPausedNode'
     bl_label = 'Set Action Paused'

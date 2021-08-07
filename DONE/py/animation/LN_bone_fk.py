@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class BoneFKNode(ArmLogicTreeNode):
-    """Applies forward kinematics in the given object bone.
-    """
+    """Applies forward kinematics in the given object bone."""
 
     bl_idname = 'LNBoneFKNode'
     bl_label = 'Bone FK'

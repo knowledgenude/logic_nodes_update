@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class SetVelocityNode(ArmLogicTreeNode):
-    """Sets the velocity of the given object.
-    """
+    """Sets the velocity of the given object."""
 
     bl_idname = 'LNSetVelocityNode'
     bl_label = 'Set Velocity'

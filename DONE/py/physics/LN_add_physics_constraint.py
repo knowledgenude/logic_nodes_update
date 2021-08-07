@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class AddPhysicsConstraintNode(ArmLogicTreeNode):
-    """
-    Add a physics constraint to constrain two rigid bodies if not already present.
+    """Add a physics constraint to constrain two rigid bodies if not already present.
 
     @option Fixed: No fredom of movement. Relative positions and rotations of rigid bodies are fixed
 
@@ -43,7 +42,6 @@ class AddPhysicsConstraintNode(ArmLogicTreeNode):
 
     @input Add Constarint: Option to add custom constraint to `Generic Spring` type.
     """
-
 
     bl_idname = 'LNAddPhysicsConstraintNode'
     bl_label = 'Add Physics Constraint'

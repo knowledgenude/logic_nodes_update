@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class SetObjectActivationStateNode(ArmLogicTreeNode):
-    """Sets the rigid body simulation state of the given object.
-    """
+    """Sets the rigid body simulation state of the given object."""
 
     bl_idname = 'LNSetObjectActivationStateNode'
     bl_label = 'Set Object Activation State'

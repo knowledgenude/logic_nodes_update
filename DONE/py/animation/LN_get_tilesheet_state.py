@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class GetTilesheetStateNode(ArmLogicTreeNode):
-    """Returns the information about the current tilesheet of the given object.
-    """
+    """Returns the information about the current tilesheet of the given object."""
 
     bl_idname = 'LNGetTilesheetStateNode'
     bl_label = 'Get Tilesheet State'

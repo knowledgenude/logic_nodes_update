@@ -1,8 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class ObjectNode(ArmLogicTreeNode):
-    """Stores the given object as a variable.
-    """
+    """Stores the given object as a variable."""
 
     bl_idname = 'LNObjectNode'
     bl_label = 'Object'
