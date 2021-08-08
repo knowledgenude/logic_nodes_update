@@ -13,10 +13,13 @@
 	Remove Rigid Body
 	Set Object Visible
 	Get Object Visible
+	Get Object By Name
 
 * Removed deprecated nodes
 * Added missing compilation flags in physics nodes
 * Cleanups in .py files and .hx files
 * Renamed some inputs and returned "RB" references in logic nodes inputs back to "Object"
-* Display Info node and Window Info node was merged into Get Screen Resolution node
-* Gate node and Compare node was merged into Gate node
+* Merged Display Info node and Window Info node into Get Screen Resolution node
+* Merged Gate node and Compare node into Gate node
+* Merged World Vector To Local Space node and Vector To Object Orientation node into Convert Vector node
+* Merged Rad to Deg node and Deg to Rad node into Convert Angle node

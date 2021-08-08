@@ -1,9 +1,12 @@
 package armory.logicnode;
 
-import iron.data.SceneFormat;
-import iron.object.Object;
+/*
+This file was previously GetObjectNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): MoritzBrueckner, QuantumCoderQC
+*/
 
-class GetObjectNode extends LogicNode {
+class GetObjectByNameNode extends LogicNode {
 
 	/** Scene from which to take the object **/
 	public var property0: Null<String>;

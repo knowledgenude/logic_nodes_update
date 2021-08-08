@@ -1,6 +1,5 @@
-// Pulses the vibration hardware on the device for time in milliseconds, if such hardware exists.
-
 package armory.logicnode;
+
 import kha.System;
 
 class SetVibrateNode extends LogicNode {
@@ -10,7 +9,12 @@ class SetVibrateNode extends LogicNode {
     }
 
     override function run(from: Int) {
-        if (inputs[1].get() > 0) System.vibrate(inputs[1].get());
+        var ms = inputs[1].get();
+
+        if (ms == null) return;
+
+        System.vibrate(inputs[1].get());
+
         runOutput(0);
     }
 }

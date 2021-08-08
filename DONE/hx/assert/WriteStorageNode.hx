@@ -1,5 +1,7 @@
 package armory.logicnode;
 
+import iron.system.Storage;
+
 class WriteStorageNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
@@ -10,11 +12,12 @@ class WriteStorageNode extends LogicNode {
 		var key: String = inputs[1].get();
 		var value: Dynamic = inputs[2].get();
 
-		var data = iron.system.Storage.data;
+		var data = Storage.data;
+	
 		if (data == null) return;
 
 		Reflect.setField(data, key, value);
-		iron.system.Storage.save();
+		Storage.save();
 
 		runOutput(0);
 	}

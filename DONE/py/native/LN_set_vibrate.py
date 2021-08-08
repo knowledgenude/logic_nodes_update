@@ -1,8 +1,9 @@
 from arm.logicnode.arm_nodes import *
+
 import arm.utils
 
 class SetVibrateNode(ArmLogicTreeNode):
-    """Pulses the vibration hardware on the device for time in milliseconds, if such hardware exists."""
+    """Pulses the vibration hardware on the device for time in milliseconds if such hardware exists."""
 
     bl_idname = 'LNSetVibrateNode'
     bl_label = 'Set Vibrate'

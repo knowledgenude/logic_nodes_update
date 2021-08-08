@@ -1,16 +1,19 @@
 package armory.logicnode;
 
-import iron.data.MaterialData;
+import kha.FastFloat;
+import iron.math.Vec4;
 import iron.object.Object;
+import iron.object.Uniforms;
+import iron.data.MaterialData;
 
 class SetShaderUniformNode extends LogicNode {
 
 	static var registered = false;
 	static var intMap = new Map<String, Null<Int>>();
-	static var floatMap = new Map<String, Null<kha.FastFloat>>();
-	static var vec2Map = new Map<String, iron.math.Vec4>();
-	static var vec3Map = new Map<String, iron.math.Vec4>();
-	static var vec4Map = new Map<String, iron.math.Vec4>();
+	static var floatMap = new Map<String, Null<FastFloat>>();
+	static var vec2Map = new Map<String, Vec4>();
+	static var vec3Map = new Map<String, Vec4>();
+	static var vec4Map = new Map<String, Vec4>();
 
 	/** Uniform type **/
 	public var property0: String;
@@ -19,16 +22,17 @@ class SetShaderUniformNode extends LogicNode {
 		super(tree);
 		if (!registered) {
 			registered = true;
-			iron.object.Uniforms.externalIntLinks.push(intLink);
-			iron.object.Uniforms.externalFloatLinks.push(floatLink);
-			iron.object.Uniforms.externalVec2Links.push(vec2Link);
-			iron.object.Uniforms.externalVec3Links.push(vec3Link);
-			iron.object.Uniforms.externalVec4Links.push(vec4Link);
+			Uniforms.externalIntLinks.push(intLink);
+			Uniforms.externalFloatLinks.push(floatLink);
+			Uniforms.externalVec2Links.push(vec2Link);
+			Uniforms.externalVec3Links.push(vec3Link);
+			Uniforms.externalVec4Links.push(vec4Link);
 		}
 	}
 
 	override function run(from: Int) {
 		var uniformName: String = inputs[1].get();
+
 		if (uniformName == null) return;
 
 		switch (property0) {

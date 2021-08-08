@@ -2,10 +2,10 @@ import bpy
 
 from arm.logicnode.arm_nodes import *
 
-class GetObjectNode(ArmLogicTreeNode):
-    """Searches for a object that uses the given name in the current active scene and returns it."""
+class GetObjectByNameNode(ArmLogicTreeNode):
+    """Returns the object in the active scene that have the given name if it exists."""
 
-    bl_idname = 'LNGetObjectNode'
+    bl_idname = 'LNGetObjectByNameNode'
     bl_label = 'Get Object by Name'
     arm_version = 1
 

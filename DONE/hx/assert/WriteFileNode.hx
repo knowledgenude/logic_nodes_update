@@ -1,6 +1,6 @@
 package armory.logicnode;
 
-class WriteJsonNode extends LogicNode {
+class WriteFileNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);
@@ -9,13 +9,13 @@ class WriteJsonNode extends LogicNode {
 	override function run(from: Int) {
 		// Relative or absolute path to file
 		var file: String = inputs[1].get();
-		var data: Dynamic = inputs[2].get();
-		var s = haxe.Json.stringify(data);
-		trace(s);
+		var data: String = inputs[2].get();
+
+		if (file == null) return;
 
 		#if kha_krom
 		var path = Krom.getFilesLocation() + "/" + file;
-		var bytes = haxe.io.Bytes.ofString(s);
+		var bytes = haxe.io.Bytes.ofString(data);
 		Krom.fileSaveBytes(path, bytes.getData());
 		#end
 	}
