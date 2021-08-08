@@ -23,15 +23,15 @@ class GateNode(ArmLogicTreeNode):
     min_inputs = 3
     property0: HaxeEnumProperty(
         'property0',
-        items = [('Equal', 'Equal', 'Equal'),
-                 ('Almost Equal', 'Almost Equal', 'Almost Equal'),
-                 ('Greater', 'Greater', 'Greater'),
-                 ('Greater Equal', 'Greater Equal', 'Greater Equal'),
-                 ('Less', 'Less', 'Less'),
-                 ('Less Equal', 'Less Equal', 'Less Equal'),
-                 ('Or', 'Or', 'Or'),
-                 ('And', 'And', 'And')],
-        name='', default='Equal',
+        items = [('equal', 'Equal', 'Equal'),
+                 ('almost equal', 'Almost Equal', 'Almost Equal'),
+                 ('greater', 'Greater', 'Greater'),
+                 ('greater equal', 'Greater Equal', 'Greater Equal'),
+                 ('less', 'Less', 'Less'),
+                 ('less equal', 'Less Equal', 'Less Equal'),
+                 ('or', 'Or', 'Or'),
+                 ('and', 'And', 'And')],
+        name='', default='equal',
         update=remove_extra_inputs)
     property1: HaxeFloatProperty('property1', name='Tolerance', description='Precision for float compare', default=0.0001)
 

@@ -10,7 +10,8 @@ class FunctionOutputNode extends LogicNode {
 	}
 
 	override function run(from: Int) {
-		this.result = inputs[1].get();
+		result = inputs[1].get();
+
 		runOutput(0);
 	}
 }

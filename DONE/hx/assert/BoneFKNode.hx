@@ -1,10 +1,10 @@
 package armory.logicnode;
 
-import iron.math.Quat;
+import iron.math.Mat4;
 import iron.math.Vec4;
+import iron.math.Quat;
 import iron.object.Object;
 import iron.object.BoneAnimation;
-import iron.math.Mat4;
 
 class BoneFKNode extends LogicNode {
 

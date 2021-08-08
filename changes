@@ -15,3 +15,4 @@ Remove Rigid Body
 * Added missing compilation flag in physics nodes
 * Cleanups in .py files and .hx files
 * Renamed some inputs and returned "RB" references back to "Object"
+* Display Info node and Window Info node was merged into Get Screen Resolution node

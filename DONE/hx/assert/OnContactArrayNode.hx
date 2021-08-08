@@ -46,12 +46,9 @@ class OnContactArrayNode extends LogicNode {
 
 		var b = false;
 		switch (property0) {
-		case "begin":
-			b = contact && !lastContact;
-		case "overlap":
-			b = contact;
-		case "end":
-			b = !contact && lastContact;
+			case "begin": b = contact && !lastContact;
+			case "overlap": b = contact;
+			case "end": b = !contact && lastContact;
 		}
 
 		lastContact = contact;

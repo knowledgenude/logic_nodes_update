@@ -1,8 +1,8 @@
 package armory.logicnode;
 
+import iron.math.Mat4;
 import iron.object.Object;
 import iron.object.BoneAnimation;
-import iron.math.Mat4;
 
 class GetBoneTransformNode extends LogicNode {
 

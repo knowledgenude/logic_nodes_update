@@ -1,6 +1,6 @@
 from arm.logicnode.arm_nodes import *
 
-class SetPropertyNode(ArmLogicTreeNode):
+class SetObjectPropertyNode(ArmLogicTreeNode):
     """Sets the value of the given object property.
 
     This node can be used to share variables between different traits.
@@ -11,7 +11,7 @@ class SetPropertyNode(ArmLogicTreeNode):
     @seeNode Get Object Property
     """
 
-    bl_idname = 'LNSetPropertyNode'
+    bl_idname = 'LNSetObjectPropertyNode'
     bl_label = 'Set Object Property'
     arm_section = 'props'
     arm_version = 1

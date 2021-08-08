@@ -1,9 +1,9 @@
 from arm.logicnode.arm_nodes import *
 
-class ClearParentNode(ArmLogicTreeNode):
+class RemoveObjectParentNode(ArmLogicTreeNode):
     """Removes the parent of the given object."""
 
-    bl_idname = 'LNClearParentNode'
+    bl_idname = 'LNRemoveObjectParentNode'
     bl_label = 'Remove Object Parent'
     arm_section = 'relations'
     arm_version = 1

@@ -26,7 +26,8 @@ class RayCastNode extends LogicNode {
 		var hit = PhsyicsWorld.active.rayCast(from, to, mask);
 
 		if (hit != null) {
-			return switch(from) {
+			return switch (from) {
+				default: null;
 				case 0: hit.rb;
 				case 1: hit.pos;
 				case 2: hit.normal;

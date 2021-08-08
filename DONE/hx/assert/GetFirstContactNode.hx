@@ -1,7 +1,9 @@
 package armory.logicnode;
 
 import iron.object.Object;
+#if arm_physics
 import armory.trait.physics.RigidBody;
+#end
 
 class GetFirstContactNode extends LogicNode {
 
@@ -13,12 +15,12 @@ class GetFirstContactNode extends LogicNode {
 		var object: Object = inputs[0].get();
 		if (object == null) return null;
 
-#if arm_physics
+		#if arm_physics
 		var physics = armory.trait.physics.PhysicsWorld.active;
 		var rbs = physics.getContacts(object.getTrait(RigidBody));
 
 		if (rbs != null && rbs.length > 0) return rbs[0].object;
-#end
+		#end
 
 		return null;
 	}

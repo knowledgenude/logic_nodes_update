@@ -39,7 +39,7 @@ class BoneIKNode extends LogicNode {
 
 		var bone = anim.getBone(boneName);
 
-		if(! poleEnabled) pole = null;
+		if(!poleEnabled) pole = null;
 
 		function solveBone() {
 			// Solve IK
