@@ -1,6 +1,5 @@
 from arm.logicnode.arm_nodes import *
 
-
 def remove_extra_inputs(self, context):
     if not any(p == self.property0 for p in ['Or', 'And']):
         while len(self.inputs) > self.min_inputs:
@@ -23,15 +22,15 @@ class GateNode(ArmLogicTreeNode):
     min_inputs = 3
     property0: HaxeEnumProperty(
         'property0',
-        items = [('equal', 'Equal', 'Equal'),
-                 ('almost equal', 'Almost Equal', 'Almost Equal'),
-                 ('greater', 'Greater', 'Greater'),
-                 ('greater equal', 'Greater Equal', 'Greater Equal'),
-                 ('less', 'Less', 'Less'),
-                 ('less equal', 'Less Equal', 'Less Equal'),
-                 ('or', 'Or', 'Or'),
-                 ('and', 'And', 'And')],
-        name='', default='equal',
+        items = [('Equal', 'Equal', 'Equal'),
+                 ('Almost Equal', 'Almost Equal', 'Almost Equal'),
+                 ('Greater', 'Greater', 'Greater'),
+                 ('Greater Equal', 'Greater Equal', 'Greater Equal'),
+                 ('Less', 'Less', 'Less'),
+                 ('Less Equal', 'Less Equal', 'Less Equal'),
+                 ('Or', 'Or', 'Or'),
+                 ('And', 'And', 'And')],
+        name='', default='Equal',
         update=remove_extra_inputs)
     property1: HaxeFloatProperty('property1', name='Tolerance', description='Precision for float compare', default=0.0001)
 

@@ -6,6 +6,12 @@ import iron.object.Object;
 import armory.trait.physics.RigidBody;
 #end
 
+/*
+This file was previously ClearParentNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): donalffons, QuantumCoderQC
+*/
+
 class RemoveObjectParentNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
