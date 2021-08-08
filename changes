@@ -1,18 +1,22 @@
-Was renamed:
+* Nodes renamed:
 
-Alternate Output
-Get Active Camera
-Get Active Scene
-Set Active Scene
-Set Active Camera
-Get Action State
-Ray Cast
-Set World Gravity
-Get World Gravity
-Set Object Gravity Enabled
-Remove Rigid Body
+	Alternate Output
+	Get Active Camera
+	Get Active Scene
+	Set Active Scene
+	Set Active Camera
+	Get Action State
+	Ray Cast
+	Get World Gravity
+	Get World Gravity
+	Get Object Gravity Enabled
+	Remove Rigid Body
+	Set Object Visible
+	Get Object Visible
 
-* Added missing compilation flag in physics nodes
+* Removed deprecated nodes
+* Added missing compilation flags in physics nodes
 * Cleanups in .py files and .hx files
-* Renamed some inputs and returned "RB" references back to "Object"
+* Renamed some inputs and returned "RB" references in logic nodes inputs back to "Object"
 * Display Info node and Window Info node was merged into Get Screen Resolution node
+* Gate node and Compare node was merged into Gate node

@@ -2,6 +2,9 @@ package armory.logicnode;
 
 import iron.object.Object;
 
+// This file was previously ActiveCameraNode.hx and was renamed to be updated
+// Original author: luboslenco
+
 class SetObjectVisibleNode extends LogicNode {
 
 	public var property0: String;
