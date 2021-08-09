@@ -19,5 +19,4 @@ class DefaultIfEmptyNode extends LogicNode {
 			case "zero": v1 == 0.0 ? v2 : v1;
 		}
 	}
-
 }

@@ -13,9 +13,9 @@ class DefaultIfEmptyNode(ArmLogicTreeNode):
 
     property0: HaxeEnumProperty(
         'property0',
-        items = [('null', 'Null', 'Return the Default value is the connected value is null'),
-                 ('empty string', 'Return the Default value is the connected value is an empty string'),
-                 ('zero', 'Zero', 'Return the Default value is the connected value is zero'),
+        items = [('null', 'Null', 'Return the Default value if the connected value is null'),
+                 ('empty string', 'Return the Default value if the connected value is an empty string'),
+                 ('zero', 'Zero', 'Return the Default value if the connected value is zero'),
                  ],
         name='', default='null')
 
