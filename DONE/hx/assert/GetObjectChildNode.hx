@@ -2,6 +2,12 @@ package armory.logicnode;
 
 import iron.object.Object;
 
+/*
+This file was previously GetChildNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): QuantumCoderQC
+*/
+
 class GetObjectChildNode extends LogicNode {
 
 	public var property0: String;

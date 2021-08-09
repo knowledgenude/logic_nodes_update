@@ -2,6 +2,9 @@ package armory.logicnode;
 
 import iron.object.Object;
 
+//This file was previously GetChildrenNode.hx and was renamed to be updated
+//Original author: luboslenco
+
 class GetObjectChildrenNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
