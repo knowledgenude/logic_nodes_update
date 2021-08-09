@@ -1,18 +1,18 @@
 from arm.logicnode.arm_nodes import *
 
-class SurfaceNode(ArmLogicTreeNode):
+class OnSurfaceNode(ArmLogicTreeNode):
     """Activates the output on the given touch event."""
 
-    bl_idname = 'LNMergedSurfaceNode'
-    bl_label = 'Touch'
+    bl_idname = 'LNOnSurfaceNode'
+    bl_label = 'On Surface'
     arm_section = 'surface'
     arm_version = 1
 
     property0: HaxeEnumProperty(
         'property0',
-        items = [('started', 'Started', 'The screen surface starts to be touched'),
+        items = [('started', 'Started', 'The screen surface is just touched'),
                  ('down', 'Down', 'The screen surface is touched'),
-                 ('released', 'Released', 'The screen surface stops being touched'),
+                 ('released', 'Released', 'The screen surface is just released'),
                  ('moved', 'Moved', 'Moved')],
         name='', default='down')
 

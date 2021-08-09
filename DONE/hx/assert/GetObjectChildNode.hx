@@ -2,7 +2,7 @@ package armory.logicnode;
 
 import iron.object.Object;
 
-class GetChildNode extends LogicNode {
+class GetObjectChildNode extends LogicNode {
 
 	public var property0: String;
 
@@ -16,24 +16,20 @@ class GetChildNode extends LogicNode {
 
 		if (object == null || childName == null) return null;
 
-		switch (property0) {
-		case "By Name":
-			return object.getChild(childName);
-		case "Contains":
-			return contains(object, childName);
-		case "Starts With":
-			return startsWith(object, childName);
-		case "Ends With":
-			return endsWith(object, childName);
+		return switch (property0) {
+			default: null;
+			case "by name": object.getChild(childName);
+			case "contains": contains(object, childName);
+			case "starts with": startsWith(object, childName);
+			case "ends with": endsWith(object, childName);
 		}
-
-		return null;
 	}
 
 	function contains(o: Object, name: String): Object {
 		for (c in o.children) {
 			if (c.name.indexOf(name) >= 0) return c;
 		}
+
 		return null;
 	}
 
@@ -41,6 +37,7 @@ class GetChildNode extends LogicNode {
 		for (c in o.children) {
 			if (StringTools.startsWith(c.name, name)) return c;
 		}
+
 		return null;
 	}
 
@@ -48,6 +45,7 @@ class GetChildNode extends LogicNode {
 		for (c in o.children) {
 			if (StringTools.endsWith(c.name, name)) return c;
 		}
+
 		return null;
 	}
 }

@@ -18,9 +18,9 @@ class MatrixMathNode extends LogicNode {
 		if (m1 == null || m2 == null) return null;
 
 		m.setFrom(m1);
+
 		switch (property0) {
-		case "Multiply":
-			m.multmat(m2);
+			case "multiply": m.multmat(m2);
 		}
 
 		return m;

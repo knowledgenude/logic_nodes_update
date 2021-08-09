@@ -1,6 +1,5 @@
 from arm.logicnode.arm_nodes import *
 
-# Class OnTapScreen
 class OnTapScreen(ArmLogicTreeNode):
     """Activates the output on tap screen event.
 

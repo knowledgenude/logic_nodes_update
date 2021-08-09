@@ -1,18 +1,18 @@
 from arm.logicnode.arm_nodes import *
 
-class MouseNode(ArmLogicTreeNode):
+class OnMouseNode(ArmLogicTreeNode):
     """Activates the output on the given mouse event."""
 
-    bl_idname = 'LNMergedMouseNode'
-    bl_label = 'Mouse'
+    bl_idname = 'LNOnMouseNode'
+    bl_label = 'On Mouse'
     arm_section = 'mouse'
     arm_version = 1
 
     property0: HaxeEnumProperty(
         'property0',
-        items = [('started', 'Started', 'The mouse button startes to be pressed'),
+        items = [('started', 'Started', 'The mouse button is just pressed'),
                  ('down', 'Down', 'The mouse button is pressed'),
-                 ('released', 'Released', 'The mouse button stops being pressed'),
+                 ('released', 'Released', 'The mouse button is just released'),
                  ('moved', 'Moved', 'Moved')],
         name='', default='down')
     property1: HaxeEnumProperty(

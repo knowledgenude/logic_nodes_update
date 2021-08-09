@@ -1,5 +1,7 @@
 package armory.logicnode;
 
+import iron.Scene;
+import iron.data.Data;
 import iron.data.MaterialData;
 
 class MaterialNode extends LogicNode {
@@ -10,14 +12,14 @@ class MaterialNode extends LogicNode {
 	public function new(tree: LogicTree) {
 		super(tree);
 
-		iron.Scene.active.notifyOnInit(function() {
+		Scene.active.notifyOnInit(function() {
 			get(0);
 		});
 	}
 
 	override function get(from: Int): Dynamic {
 		if (property0 != null) {
-			iron.data.Data.getMaterial(iron.Scene.active.raw.name, property0, function(mat: MaterialData) {
+			Data.getMaterial(Scene.active.raw.name, property0, function(mat: MaterialData) {
 				value = mat;
 			});
 		}

@@ -14,6 +14,7 @@
 	Set Object Visible
 	Get Object Visible
 	Get Object By Name
+	Get Time
 
 * Removed deprecated nodes
 * Added missing compilation flags in physics nodes

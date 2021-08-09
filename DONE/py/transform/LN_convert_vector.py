@@ -17,7 +17,7 @@ class ConvertVectorNode(ArmLogicTreeNode):
         items = [('to local space', 'To Local Space', 'The vector is converted to object local space'),
                  ('to world space', 'To World Space', 'The vector is converted to world space'),
                  ],
-        name='', default='object')
+        name='', default='to local space')
 
     def arm_init(self, context):
         self.add_input('ArmNodeSocketObject', 'Object')

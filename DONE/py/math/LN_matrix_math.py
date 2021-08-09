@@ -10,12 +10,12 @@ class MatrixMathNode(ArmLogicTreeNode):
 
     property0: HaxeEnumProperty(
         'property0',
-        items = [('Multiply', 'Multiply', 'Multiply')],
-        name='', default='Multiply')
+        items = [('multiply', 'Multiply', 'Multiply')],
+        name='', default='multiply')
 
     def arm_init(self, context):
-        self.add_input('ArmDynamicSocket', 'Matrix 1')
-        self.add_input('ArmDynamicSocket', 'Matrix 2')
+        self.add_input('ArmDynamicSocket', 'Matrix A')
+        self.add_input('ArmDynamicSocket', 'Matrix B')
 
         self.add_output('ArmDynamicSocket', 'Result')
 

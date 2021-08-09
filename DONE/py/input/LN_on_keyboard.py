@@ -1,18 +1,18 @@
 from arm.logicnode.arm_nodes import *
 
-class KeyboardNode(ArmLogicTreeNode):
+class OnKeyboardNode(ArmLogicTreeNode):
     """Activates the output on the given keyboard button event."""
 
-    bl_idname = 'LNMergedKeyboardNode'
+    bl_idname = 'LNOnKeyboardNode'
     bl_label = 'Keyboard'
     arm_section = 'keyboard'
     arm_version = 1
 
     property0: HaxeEnumProperty(
         'property0',
-        items = [('started', 'Started', 'The keyboard button starts being pressed'),
+        items = [('started', 'Started', 'The keyboard button is just pressed'),
                  ('down', 'Down', 'The keyboard button is pressed'),
-                 ('released', 'Released', 'The keyboard button stops being pressed')],
+                 ('released', 'Released', 'The keyboard button is just released')],
         name='', default='down')
 
     property1: HaxeEnumProperty(

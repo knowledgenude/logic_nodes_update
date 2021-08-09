@@ -1,6 +1,6 @@
 from arm.logicnode.arm_nodes import *
 
-class GamepadNode(ArmLogicTreeNode):
+class OnGamepadNode(ArmLogicTreeNode):
     """Activates the output on the given gamepad event.
 
     @seeNode Gamepad Coords
@@ -11,18 +11,16 @@ class GamepadNode(ArmLogicTreeNode):
     @option Button: the gamepad button that should activate the output.
     """
 
-    bl_idname = 'LNMergedGamepadNode'
-    bl_label = 'Gamepad'
+    bl_idname = 'LNOnGamepadNode'
+    bl_label = 'On Gamepad'
     arm_version = 1
     arm_section = 'gamepad'
 
     property0: HaxeEnumProperty(
         'property0',
-        items = [('started', 'Started', 'The gamepad button starts being pressed'),
+        items = [('started', 'Started', 'The gamepad button is just pressed'),
                  ('down', 'Down', 'The gamepad button is pressed'),
-                 ('released', 'Released', 'The gamepad button stops being pressed')],
-                 # ('Moved Left', 'Moved Left', 'Moved Left'),
-                 # ('Moved Right', 'Moved Right', 'Moved Right'),],
+                 ('released', 'Released', 'The gamepad button is just released')],
         name='', default='down')
 
     property1: HaxeEnumProperty(

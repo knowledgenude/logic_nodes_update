@@ -1,19 +1,18 @@
 from arm.logicnode.arm_nodes import *
 
-class VirtualButtonNode(ArmLogicTreeNode):
-    """Activates the output on the given virtual button event.
-    """
+class OnVirtualButtonNode(ArmLogicTreeNode):
+    """Activates the output on the given virtual button event."""
 
-    bl_idname = 'LNMergedVirtualButtonNode'
-    bl_label = 'Virtual Button'
+    bl_idname = 'LNOnVirtualButtonNode'
+    bl_label = 'On Virtual Button'
     arm_section = 'virtual'
     arm_version = 1
 
     property0: HaxeEnumProperty(
         'property0',
-        items = [('started', 'Started', 'The virtual button starts to be pressed'),
+        items = [('started', 'Started', 'The virtual button is just pressed'),
                  ('down', 'Down', 'The virtual button is pressed'),
-                 ('released', 'Released', 'The virtual button stops being pressed')],
+                 ('released', 'Released', 'The virtual button is just released')],
         name='', default='down')
     property1: HaxeStringProperty('property1', name='', default='button')
 

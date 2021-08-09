@@ -1,6 +1,7 @@
 package armory.logicnode;
 
 import iron.math.Vec4;
+import iron.system.Input;
 
 class GamepadCoordsNode extends LogicNode {
 
@@ -12,7 +13,11 @@ class GamepadCoordsNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		var num: Int = inputs[0].get();
-		var gamepad = iron.system.Input.getGamepad(num);
+
+		if (num == null) return null;
+
+		var gamepad = Input.getGamepad(num);
+
 		if (from == 0) {
 			coords.x = gamepad.leftStick.x;
 			coords.y = gamepad.leftStick.y;
@@ -39,6 +44,7 @@ class GamepadCoordsNode extends LogicNode {
 		else if (from == 5) {
 			return gamepad.down("r2");
 		}
+
 		return null;
 	}
 }
