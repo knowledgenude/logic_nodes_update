@@ -1,6 +1,7 @@
 package armory.logicnode;
 
 import iron.math.Vec4;
+import iron.system.Input;
 
 class GetCursorLocationNode extends LogicNode {
 
@@ -11,14 +12,14 @@ class GetCursorLocationNode extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-		var mouse = iron.system.Input.getMouse();
+		var mouse = Input.getMouse();
 
 		return switch (from) {
+			default: null;
 			case 0: mouse.x;
 			case 1: mouse.y;
 			case 2: mouse.x * -1;
 			case 3: mouse.y * -1;
-			default: null;
 		}
 	}
 }

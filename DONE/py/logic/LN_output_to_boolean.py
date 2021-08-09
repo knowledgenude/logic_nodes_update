@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class ToBoolNode(ArmLogicTreeNode):
+class OutputToBooleanNode(ArmLogicTreeNode):
     """Converts a signal to a boolean value. If the input signal is
     active, the boolean is `true`; if not, the boolean is `false`."""
 
-    bl_idname = 'LNToBoolNode'
+    bl_idname = 'LNOutputToBooleanNode'
     bl_label = 'Output to Boolean'
     arm_version = 1
 

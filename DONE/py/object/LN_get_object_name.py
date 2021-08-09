@@ -1,9 +1,9 @@
 from arm.logicnode.arm_nodes import *
 
-class GetNameNode(ArmLogicTreeNode):
+class GetObjectNameNode(ArmLogicTreeNode):
     """Returns the name of the given object."""
 
-    bl_idname = 'LNGetNameNode'
+    bl_idname = 'LNGetObjectNameNode'
     bl_label = 'Get Object Name'
     arm_section = 'props'
     arm_version = 1

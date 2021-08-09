@@ -1,5 +1,7 @@
 package armory.logicnode;
 
+import kha.System;
+
 class GetSystemName extends LogicNode {
 
 	public function new(tree: LogicTree) {
@@ -7,16 +9,16 @@ class GetSystemName extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-		var systemName: String = kha.System.systemId;
+		var systemName: String = System.systemId;
 
 		return switch (from) {
+			default: false;
 			case 0: systemName;
 			case 1: equalsCI(systemName, 'Windows');
 			case 2: equalsCI(systemName, 'Linux');
 			case 3: equalsCI(systemName, 'Mac');
 			case 4: equalsCI(systemName, 'HTML5');
 			case 5: equalsCI(systemName, 'Android');
-			default: null;
 		}
 	}
 

@@ -2,7 +2,10 @@ package armory.logicnode;
 
 import iron.object.Object;
 
-class GetObjectOffscreenNode extends LogicNode {
+// This file was previously GetNameNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class GetObjectNameNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);
@@ -13,12 +16,6 @@ class GetObjectOffscreenNode extends LogicNode {
 
 		if (object == null) return null;
 
-		return switch (from) {
-			case 0: object.culled;
-			case 1: object.culledMesh;
-			case 2: object.culledShadow;
-			default: null;
-		}
-
+		return object.name;
 	}
 }

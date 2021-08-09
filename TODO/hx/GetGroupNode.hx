@@ -1,5 +1,7 @@
 package armory.logicnode;
 
+import iron.Scene;
+
 class GetGroupNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
@@ -8,6 +10,9 @@ class GetGroupNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		var groupName: String = inputs[0].get();
-		return iron.Scene.active.getGroup(groupName);
+
+		if (groupName == null) return null;
+
+		return Scene.active.getGroup(groupName);
 	}
 }

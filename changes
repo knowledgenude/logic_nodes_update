@@ -18,6 +18,8 @@
 	Get Object Child
 	Get Object Children
 	Get Gamepad Coords
+	Output to Boolean
+	Get Object Name
 
 * Removed deprecated nodes
 * Added missing compilation flags in physics nodes

@@ -1,6 +1,9 @@
 package armory.logicnode;
 
-class ToBoolNode extends LogicNode {
+// This file was previously ToBoolNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class OutputToBooleanNode extends LogicNode {
 
 	var value: Bool;
 	var b = false;
@@ -16,6 +19,7 @@ class ToBoolNode extends LogicNode {
 	override function get(from: Int): Dynamic {
 		value = b;
 		b = false;
+
 		return value;
 	}
 }
