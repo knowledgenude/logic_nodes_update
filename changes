@@ -15,6 +15,7 @@
 	Get Object Visible
 	Get Object By Name
 	Get Time
+	Get Gamepad Coords
 
 * Removed deprecated nodes
 * Added missing compilation flags in physics nodes

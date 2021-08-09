@@ -3,7 +3,13 @@ package armory.logicnode;
 import iron.math.Vec4;
 import iron.system.Input;
 
-class GamepadCoordsNode extends LogicNode {
+/*
+This file was previously GamepadCoordsNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): zaethan
+*/
+
+class GetGamepadCoordsNode extends LogicNode {
 
 	var coords = new Vec4();
 
@@ -12,11 +18,11 @@ class GamepadCoordsNode extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-		var num: Int = inputs[0].get();
+		var index: Int = inputs[0].get();
 
-		if (num == null) return null;
+		if (index == null) return null;
 
-		var gamepad = Input.getGamepad(num);
+		var gamepad = Input.getGamepad(index);
 
 		if (from == 0) {
 			coords.x = gamepad.leftStick.x;

@@ -1,6 +1,6 @@
 from arm.logicnode.arm_nodes import *
 
-class GamepadCoordsNode(ArmLogicTreeNode):
+class GetGamepadCoordsNode(ArmLogicTreeNode):
     """Returns the coordinates of the given gamepad.
 
     @seeNode Gamepad
@@ -8,8 +8,8 @@ class GamepadCoordsNode(ArmLogicTreeNode):
     @input Gamepad: the ID of the gamepad.
     """
 
-    bl_idname = 'LNGamepadCoordsNode'
-    bl_label = 'Gamepad Coords'
+    bl_idname = 'LNGetGamepadCoordsNode'
+    bl_label = 'Get Gamepad Coords'
     arm_version = 1
     arm_section = 'gamepad'
 
