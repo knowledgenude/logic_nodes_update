@@ -23,6 +23,8 @@
 	Invert Output
 	Output Sequence
 	String Contains
+	Get Global Object
+	Get Trait Information
 
 * Removed Is False node and Is True node, because Branch node is a more complete version of these
 * Removed deprecated nodes
