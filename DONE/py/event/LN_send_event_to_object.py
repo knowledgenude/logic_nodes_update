@@ -1,6 +1,6 @@
 from arm.logicnode.arm_nodes import *
 
-class SendEventNode(ArmLogicTreeNode):
+class SendEventToObjectNode(ArmLogicTreeNode):
     """Sends a event to the given object.
 
     @seeNode Send Event
@@ -10,7 +10,7 @@ class SendEventNode(ArmLogicTreeNode):
     @input Object: the receiving object
     """
 
-    bl_idname = 'LNSendEventNode'
+    bl_idname = 'LNSendEventToObjectNode'
     bl_label = 'Send Event to Object'
     arm_section = 'custom'
     arm_version = 1

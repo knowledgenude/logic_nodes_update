@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class SetMaterialSlotNode(ArmLogicTreeNode):
+class SetMaterialNode(ArmLogicTreeNode):
     """Set Material Slot node."""
 
-    bl_idname = 'LNSetMaterialSlotNode'
-    bl_label = 'Set Object Material Slot'
+    bl_idname = 'LNSetMaterialNode'
+    bl_label = 'Set Material'
     arm_version = 1
 
     def arm_init(self, context):

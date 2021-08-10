@@ -1,9 +1,15 @@
 package armory.logicnode;
 
-import iron.system.Tween;
 import iron.math.Vec4;
+import iron.system.Tween;
 
-class VectorMixNode extends LogicNode {
+/*
+This file was previously VectorMixNode.hx and was renamed to be updated
+Author: luboslenco
+Contributor(s): anadin, MoritzBrueckner
+*/
+
+class MixVectorNode extends LogicNode {
 
 	public var property0: String; // Type
 	public var property1: String; // Ease
@@ -51,7 +57,9 @@ class VectorMixNode extends LogicNode {
 		var k: Float = inputs[0].get(); //Factor
 		var v1: Vec4 = inputs[1].get();
 		var v2: Vec4 = inputs[2].get();
+
 		if (v1 == null || v2 == null) return null;
+
 		var f = ease(k);
 		v.x = v1.x + (v2.x - v1.x) * f;
 		v.y = v1.y + (v2.y - v1.y) * f;

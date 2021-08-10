@@ -1,9 +1,9 @@
 from arm.logicnode.arm_nodes import *
 
-class VectorClampToSizeNode(ArmLogicTreeNode):
+class VectorClampNode(ArmLogicTreeNode):
     """Keeps the vector value inside the given range."""
 
-    bl_idname = 'LNVectorClampToSizeNode'
+    bl_idname = 'LNVectorClampNode'
     bl_label = 'Vector Clamp'
     arm_section = 'vector'
     arm_version = 1

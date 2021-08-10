@@ -1,6 +1,7 @@
 package armory.logicnode;
 
 import iron.object.Object;
+import armory.trait.NavAgent;
 
 class StopAgentNode extends LogicNode {
 
@@ -13,10 +14,10 @@ class StopAgentNode extends LogicNode {
 
 		if (object == null) return;
 
-#if arm_navigation
-		var agent: armory.trait.NavAgent = object.getTrait(armory.trait.NavAgent);
+		#if arm_navigation
+		var agent = object.getTrait(NavAgent);
 		agent.stop();
-#end
+		#end
 
 		runOutput(0);
 	}

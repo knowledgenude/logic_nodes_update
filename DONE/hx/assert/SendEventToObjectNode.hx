@@ -3,7 +3,13 @@ package armory.logicnode;
 import iron.object.Object;
 import armory.system.Event;
 
-class SendEventNode extends LogicNode {
+/*
+This file was previously SendEventNode.hx and was renamed to be updated
+Author: luboslenco
+Contributor(s): SunDraw
+*/
+
+class SendEventToObjectNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

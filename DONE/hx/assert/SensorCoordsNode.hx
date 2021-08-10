@@ -1,6 +1,7 @@
 package armory.logicnode;
 
 import iron.math.Vec4;
+import iron.system.Input;
 
 class SensorCoordsNode extends LogicNode {
 
@@ -11,10 +12,8 @@ class SensorCoordsNode extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-		var sensor = iron.system.Input.getSensor();
-		coords.x = sensor.x;
-		coords.y = sensor.y;
-		coords.z = sensor.z;
-		return coords;
+		var sensor = Input.getSensor();
+
+		return coords.set(sensor.x, sensor.y, sensor.z);
 	}
 }

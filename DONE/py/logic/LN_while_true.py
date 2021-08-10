@@ -1,6 +1,6 @@
 from arm.logicnode.arm_nodes import *
 
-class WhileNode(ArmLogicTreeNode):
+class WhileTrueNode(ArmLogicTreeNode):
     """Loops while the condition is `true`.
 
     @seeNode Loop
@@ -12,7 +12,7 @@ class WhileNode(ArmLogicTreeNode):
     @output Done: Activated when the loop is done executing
     """
 
-    bl_idname = 'LNWhileNode'
+    bl_idname = 'LNWhileTrueNode'
     bl_label = 'While True'
     arm_section = 'flow'
     arm_version = 1

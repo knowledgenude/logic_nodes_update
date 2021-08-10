@@ -1,10 +1,15 @@
 package armory.logicnode;
 
-import iron.object.Object;
 import iron.math.Vec4;
+import iron.object.Object;
+#if arm_physics
 import armory.trait.physics.RigidBody;
+#end
 
-class SetScaleNode extends LogicNode {
+// This file was previously SetScaleNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class SetObjectScaleNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

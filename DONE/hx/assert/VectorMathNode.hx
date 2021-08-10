@@ -15,25 +15,29 @@ class VectorMathNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		var p1: Vec4 = inputs[0].get();
+
 		if (p1 == null) return null;
+
 		res_v.setFrom(p1);
+
 		switch (property0) {
 			// 1 arguments: Normalize, Length 
-			case "Normalize":
-				res_v.normalize();
-			case "Length":
-				res_f = res_v.length();
+			case "Normalize": res_v.normalize();
+			case "Length": res_f = res_v.length();
+
 			// 2 arguments: Distance, Reflect
 			case "Distance": {
 				var p2: Vec4 = inputs[1].get();
 				if (p2 == null) return null;
 				res_f = res_v.distanceTo(p2);
 			}
+
 			case "Reflect": {
 				var p2: Vec4 = inputs[1].get();
 				if (p2 == null) return null;
 				res_v.reflect(p2); 
 			}
+
 			// Many arguments: Add, Subtract, Average, Dot Product, Cross Product, Multiply
 			case "Add": {
 				var p2 = new Vec4();
@@ -45,6 +49,7 @@ class VectorMathNode extends LogicNode {
 					i++;
 				}
 			}
+
 			case "Subtract": {
 				var p2 = new Vec4();
 				var i = 1;
@@ -55,6 +60,7 @@ class VectorMathNode extends LogicNode {
 					i++;
 				}
 			}
+
 			case "Average": {
 				var p2 = new Vec4();
 				var i = 1;
@@ -66,6 +72,7 @@ class VectorMathNode extends LogicNode {
 					i++;
 				}
 			}
+
 			case "Dot Product": {
 				var p2 = new Vec4();
 				var i = 1;
@@ -77,6 +84,7 @@ class VectorMathNode extends LogicNode {
 					i++;
 				}
 			}
+
 			case "Cross Product": {
 				var p2 = new Vec4();
 				var i = 1;
@@ -87,6 +95,7 @@ class VectorMathNode extends LogicNode {
 					i++;
 				}
 			}
+
 			case "Multiply": {
 				var p2 = new Vec4();
 				var i = 1;
@@ -99,6 +108,7 @@ class VectorMathNode extends LogicNode {
 					i++;
 				}
 			}
+
 			case "MultiplyFloats": {
 				var p2_f = 1.0;
 				var i = 1;
@@ -109,30 +119,29 @@ class VectorMathNode extends LogicNode {
 				}
 			}
 		}
+
 		// Return and check separator
 		switch (from) {
 			case 0: return res_v;
-			case 1: 
-				if (property1) {
-					return res_v.x;
-				} else {
-					return res_f;
-				}
-			case 2: 
-				if (property1) {
-					return res_v.y;
-				} else {
-					return res_f;
-				}
-			case 3: 
-				if (property1) {
-					return res_v.z;
-				} else {
-					return res_f;
-				}
-			case 4: 
-				if (property1) return res_f;
+
+			case 1: {
+				if (property1) return res_v.x;
+				else return res_f;
+			}
+
+			case 2: {
+				if (property1) return res_v.y;
+				else return res_f;
+			}
+
+			case 3: {
+				if (property1) return res_v.z;
+				else return res_f;
+			}
+	
+			case 4: if (property1) return res_f;
 		}
+
 		return null;
 	}
 }

@@ -1,6 +1,12 @@
 package armory.logicnode;
 
-class SwitchNode extends LogicNode {
+/*
+This file was previously SwitchNode.hx and was renamed to be updated
+Author: Devination
+Contributor(s): luboslenco
+*/
+
+class SwitchOutputNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);
@@ -8,6 +14,7 @@ class SwitchNode extends LogicNode {
 
 	override function run(from: Int) {
 		var v1: Dynamic = inputs[1].get();
+
 		if (inputs.length > 2) {
 			for (i in 2...inputs.length) {
 				if (inputs[i].get() == v1) {

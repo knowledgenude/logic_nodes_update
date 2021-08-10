@@ -1,10 +1,15 @@
 package armory.logicnode;
 
-import iron.object.Object;
 import iron.math.Vec4;
+import iron.object.Object;
+#if arm_physics
 import armory.trait.physics.RigidBody;
+#end
 
-class SetLocationNode extends LogicNode {
+// This file was previously SetLocationNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class SetObjectLocationNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

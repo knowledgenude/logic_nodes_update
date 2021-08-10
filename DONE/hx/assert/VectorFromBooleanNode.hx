@@ -9,7 +9,6 @@ class VectorFromBooleanNode extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-
 		var boolX = inputs[0].get();
 		var boolNegX = inputs[1].get();
 		var boolY = inputs[2].get();
@@ -17,19 +16,18 @@ class VectorFromBooleanNode extends LogicNode {
 		var boolZ = inputs[4].get();
 		var boolNegZ = inputs[5].get();
 
-		var vector = new Vec4();
+		if (boolX == null || boolNegX == null || boolY == null || boolNegY == null || boolZ == null || boolNegZ == null) {
+			return null;
+		}
 
-		if (boolX == true) vector.x += 1;
+		var v = new Vec4();
 
-		if (boolNegX == true) vector.x += -1;
-
-		if (boolY == true) vector.y += 1;
-
-		if (boolNegY == true) vector.y += -1;
-
-		if (boolZ == true) vector.z += 1;
-
-		if (boolNegZ == true) vector.z += -1;
+		if (boolX == true) v.x += 1.0;
+		if (boolNegX == true) v.x -= 1.0;
+		if (boolY == true) v.y += 1.0;
+		if (boolNegY == true) v.y -= 1.0;
+		if (boolZ == true) v.z += 1.0;
+		if (boolNegZ == true) v.z -= 1.0;
 
 		return vector.normalize();
 	}

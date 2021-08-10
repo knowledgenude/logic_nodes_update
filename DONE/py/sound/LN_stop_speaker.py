@@ -8,7 +8,7 @@ class StopSpeakerNode(ArmLogicTreeNode):
     @seeNode Play Speaker
     """
 
-    bl_idname = 'LNStopSoundNode'
+    bl_idname = 'LNStopSpeakerNode'
     bl_label = 'Stop Speaker'
     arm_version = 1
 

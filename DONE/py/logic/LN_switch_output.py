@@ -1,19 +1,19 @@
 from arm.logicnode.arm_nodes import *
 
-class SwitchNode(ArmLogicTreeNode):
+class SwitchOutputNode(ArmLogicTreeNode):
     """Activates the outputs depending of the value. If the "value" is equal to "case 1", the output "case 1" will be activated.
 
     @output Default: Activated if the input value does not match any case.
     """
 
-    bl_idname = 'LNSwitchNode'
+    bl_idname = 'LNSwitchOutputNode'
     bl_label = 'Switch Output'
     arm_version = 1
     min_inputs = 2
     min_outputs = 1
 
     def __init__(self):
-        super(SwitchNode, self).__init__()
+        super(SwitchOutputNode, self).__init__()
         array_nodes[str(id(self))] = self
 
     def arm_init(self, context):

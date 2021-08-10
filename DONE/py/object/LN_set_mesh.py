@@ -4,7 +4,7 @@ class SetMeshNode(ArmLogicTreeNode):
     """Sets the mesh of the given object."""
 
     bl_idname = 'LNSetMeshNode'
-    bl_label = 'Set Object Mesh'
+    bl_label = 'Set Mesh'
     arm_section = 'props'
     arm_version = 1
 

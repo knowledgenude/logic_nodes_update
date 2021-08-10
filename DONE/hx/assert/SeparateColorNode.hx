@@ -9,11 +9,12 @@ class SeparateColorNode extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-		var vector: Vec4 = inputs[0].get();
-		if (vector == null) return 0.0;
+		var color: Vec4 = inputs[0].get();
 
-		if (from == 0) return vector.x;
-		else if (from == 1) return vector.y;
-		else return vector.z;
+		if (color == null) return 0.0;
+
+		if (from == 0) return color.x;
+		else if (from == 1) return color.y;
+		else return color.z;
 	}
 }

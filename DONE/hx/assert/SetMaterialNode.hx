@@ -3,7 +3,7 @@ package armory.logicnode;
 import iron.object.MeshObject;
 import iron.data.MaterialData;
 
-class SetMaterialSlotNode extends LogicNode {
+class SetMaterialNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

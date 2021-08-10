@@ -1,7 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class SelfTraitNode(ArmLogicTreeNode):
-    """Returns the trait that owns this node."""
+    """Return this trait."""
 
     bl_idname = 'LNSelfTraitNode'
     bl_label = 'Self Trait'
