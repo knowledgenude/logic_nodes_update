@@ -1,9 +1,9 @@
 from arm.logicnode.arm_nodes import *
 
-class ContainsStringNode(ArmLogicTreeNode):
-    """Returns whether the given string contains a given part."""
+class StringContainsNode(ArmLogicTreeNode):
+    """Returns whether the given string has a certain stretch."""
 
-    bl_idname = 'LNContainsStringNode'
+    bl_idname = 'LNStringContainsNode'
     bl_label = 'String Contains'
     arm_version = 1
     property0: HaxeEnumProperty(

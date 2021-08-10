@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class GetTraitNameNode(ArmLogicTreeNode):
-    """Returns the name and the class type of the given trait."""
+class GetTraitInformationNode(ArmLogicTreeNode):
+    """Returns the avaiable information about the given trait."""
 
-    bl_idname = 'LNGetTraitNameNode'
-    bl_label = 'Get Trait Name'
+    bl_idname = 'LNGetTraitInformationNode'
+    bl_label = 'Get Trait Information'
     arm_version = 1
 
     def arm_init(self, context):

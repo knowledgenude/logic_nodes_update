@@ -20,7 +20,11 @@
 	Get Gamepad Coords
 	Output to Boolean
 	Get Object Name
+	Invert Output
+	Output Sequence
+	String Contains
 
+* Removed Is False node and Is True node, because Branch node is a more complete version of these
 * Removed deprecated nodes
 * Added missing compilation flags in physics nodes
 * Cleanups in .py files and .hx files
@@ -29,3 +33,4 @@
 * Merged Gate node and Compare node into Gate node
 * Merged World Vector To Local Space node and Vector To Object Orientation node into Convert Vector node
 * Merged Rad to Deg node and Deg to Rad node into Convert Angle node
+* Merged Is Null node and Is Not Null node into Is Null node

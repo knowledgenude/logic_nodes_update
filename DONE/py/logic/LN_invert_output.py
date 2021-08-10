@@ -1,10 +1,9 @@
 from arm.logicnode.arm_nodes import *
 
-
-class InverseNode(ArmLogicTreeNode):
+class InvertOutputNode(ArmLogicTreeNode):
     """Activates the output if the input is not active."""
 
-    bl_idname = 'LNInverseNode'
+    bl_idname = 'LNInvertOutputNode'
     bl_label = 'Invert Output'
     arm_section = 'flow'
     arm_version = 1

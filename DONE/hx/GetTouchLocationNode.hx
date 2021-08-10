@@ -1,24 +1,23 @@
 package armory.logicnode;
 
 import iron.math.Vec4;
+import iron.system.Input;
 
 class GetTouchLocationNode extends LogicNode {
-
-	var coords = new Vec4();
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
 	override function get(from: Int): Dynamic {
-		var touch = iron.system.Input.getSurface();
+		var surface = Input.getSurface();
 
 		return switch (from) {
-			case 0: touch.x;
-			case 1: touch.y;
-			case 2: touch.x * -1;
-			case 3: touch.y * -1;
 			default: null;
+			case 0: surface.x;
+			case 1: surface.y;
+			case 2: surface.x * -1.0;
+			case 3: surface.y * -1.0;
 		}
 	}
 }

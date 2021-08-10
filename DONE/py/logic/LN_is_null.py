@@ -1,14 +1,14 @@
 from arm.logicnode.arm_nodes import *
 
 
-class IsNoneNode(ArmLogicTreeNode):
-    """Passes through its activation only if the plugged-in value is
-    `null` (no value).
-
-    @seeNode Is Not Null
+class IsNullNode(ArmLogicTreeNode):
+    """If the given value is null activates the Is Null output.
+    Otherwise activates the Is Not Null output.
+    
+    @seeNode Branch
     """
 
-    bl_idname = 'LNIsNoneNode'
+    bl_idname = 'LNIsNullNode'
     bl_label = 'Is Null'
     arm_version = 1
 
@@ -16,4 +16,5 @@ class IsNoneNode(ArmLogicTreeNode):
         self.add_input('ArmNodeSocketAction', 'In')
         self.add_input('ArmDynamicSocket', 'Value')
 
-        self.add_output('ArmNodeSocketAction', 'Out')
+        self.add_output('ArmNodeSocketAction', 'Is Null')
+        self.add_output('ArmNodeSocketAction', 'Is Not Null')

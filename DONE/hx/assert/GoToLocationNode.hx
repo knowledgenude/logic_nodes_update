@@ -1,8 +1,8 @@
 package armory.logicnode;
 
-import armory.trait.navigation.Navigation;
-import iron.object.Object;
 import iron.math.Vec4;
+import iron.object.Object;
+import armory.trait.navigation.Navigation;
 
 class GoToLocationNode extends LogicNode {
 
@@ -16,7 +16,7 @@ class GoToLocationNode extends LogicNode {
 
 		if (object == null || location == null) return;
 
-#if arm_navigation
+		#if arm_navigation
 		// Assume navmesh exists..
 		var from = object.transform.world.getLoc();
 		var to = location;
@@ -24,7 +24,7 @@ class GoToLocationNode extends LogicNode {
 			var agent: armory.trait.NavAgent = object.getTrait(armory.trait.NavAgent);
 			agent.setPath(path);
 		});
-#end
+		#end
 
 		runOutput(0);
 	}

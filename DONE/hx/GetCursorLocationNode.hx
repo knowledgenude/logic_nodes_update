@@ -5,8 +5,6 @@ import iron.system.Input;
 
 class GetCursorLocationNode extends LogicNode {
 
-	var coords = new Vec4();
-
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
@@ -18,8 +16,8 @@ class GetCursorLocationNode extends LogicNode {
 			default: null;
 			case 0: mouse.x;
 			case 1: mouse.y;
-			case 2: mouse.x * -1;
-			case 3: mouse.y * -1;
+			case 2: mouse.x * -1.0;
+			case 3: mouse.y * -1.0;
 		}
 	}
 }

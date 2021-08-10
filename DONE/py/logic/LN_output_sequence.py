@@ -1,15 +1,15 @@
 from arm.logicnode.arm_nodes import *
 
-class SequenceNode(ArmLogicTreeNode):
+class OutputSequenceNode(ArmLogicTreeNode):
     """Activates the outputs one by one sequentially and repeatedly."""
 
-    bl_idname = 'LNSequenceNode'
+    bl_idname = 'LNOutputSequenceNode'
     bl_label = 'Output Sequence'
     arm_section = 'flow'
     arm_version = 1
 
     def __init__(self):
-        super(SequenceNode, self).__init__()
+        super(OutputSequenceNode, self).__init__()
         array_nodes[str(id(self))] = self
 
     def arm_init(self, context):

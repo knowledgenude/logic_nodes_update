@@ -10,7 +10,7 @@ class GetHaxePropertyNode extends LogicNode {
 		var object: Dynamic = inputs[0].get();
 		var property: String = inputs[1].get();
 
-		if (object == null) return null;
+		if (object == null || property == null) return null;
 
 		return Reflect.getProperty(object, property);
 	}

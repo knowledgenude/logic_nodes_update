@@ -11,7 +11,15 @@ class ConcatenateStringNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		value = "";
-		for (inp in inputs) value += inp.get();
+
+		for (inp in inputs) {
+			var str = inp.get();
+
+			if (str == null) continue;
+
+			value += str;
+		}
+
 		return value;
 	}
 }

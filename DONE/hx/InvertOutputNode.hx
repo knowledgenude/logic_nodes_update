@@ -1,6 +1,9 @@
 package armory.logicnode;
 
-class InverseNode extends LogicNode {
+// This file was previously InverseNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class InvertOutputNode extends LogicNode {
 
 	var c = false;
 
@@ -15,6 +18,7 @@ class InverseNode extends LogicNode {
 
 	function update() {
 		if (!c) runOutput(0);
+
 		c = false;
 	}
 }
