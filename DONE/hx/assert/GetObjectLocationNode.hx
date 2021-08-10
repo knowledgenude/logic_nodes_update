@@ -2,7 +2,7 @@ package armory.logicnode;
 
 import iron.object.Object;
 
-// This file was previously GetObjectNode.hx and was renamed to be updated
+// This file was previously GetLocationNode.hx and was renamed to be updated
 // Original author: luboslenco
 
 class GetObjectLocationNode extends LogicNode {
