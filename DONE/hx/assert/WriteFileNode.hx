@@ -1,5 +1,7 @@
 package armory.logicnode;
 
+import haxe.io.Bytes;
+
 class WriteFileNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
@@ -15,7 +17,7 @@ class WriteFileNode extends LogicNode {
 
 		#if kha_krom
 		var path = Krom.getFilesLocation() + "/" + file;
-		var bytes = haxe.io.Bytes.ofString(data);
+		var bytes = Bytes.ofString(data);
 		Krom.fileSaveBytes(path, bytes.getData());
 		#end
 	}
