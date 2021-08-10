@@ -10,7 +10,6 @@ class ExpressionNode extends LogicNode {
 	}
 
 	override function run(from: Int) {
-
 		#if hscript
 		var expr = property0;
 		var parser = new hscript.Parser();

@@ -11,7 +11,8 @@ class GetScreenResolutionNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		return switch (from) {
-			default: Display.all[displayIndex].width;
+			default: null;
+			case 0: Display.all[displayIndex].width;
 			case 1: Display.all[displayIndex].height;
 			case 2: System.windowWidth();
 			case 3: System.windowHeight();

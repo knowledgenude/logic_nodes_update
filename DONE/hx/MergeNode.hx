@@ -19,6 +19,7 @@ class MergeNode extends LogicNode {
 		}
 
 		lastInputIndex = from;
+
 		runOutput(0);
 	}
 

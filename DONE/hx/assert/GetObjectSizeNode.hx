@@ -2,7 +2,7 @@ package armory.logicnode;
 
 import iron.object.Object;
 
-class GetScaleNode extends LogicNode {
+class GetObjectSizeNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);
@@ -13,6 +13,7 @@ class GetScaleNode extends LogicNode {
 
 		if (object == null) return null;
 
-		return object.transform.scale;
+		if (from == 0) return object.transform.dim;
+		else return object.transform.scale;
 	}
 }

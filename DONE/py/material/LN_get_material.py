@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class GetMaterialNode(ArmLogicTreeNode):
+class Get MaterialNode(ArmLogicTreeNode):
     """Returns the material of the given object."""
 
-    bl_idname = 'LNGetMaterialNode'
-    bl_label = 'Get Object Material'
+    bl_idname = 'LNGet MaterialNode'
+    bl_label = 'Get Material'
     arm_version = 1
 
     def arm_init(self, context):

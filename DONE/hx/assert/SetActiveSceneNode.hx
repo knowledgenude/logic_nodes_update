@@ -20,6 +20,8 @@ class SetActiveSceneNode extends LogicNode {
 	override function run(from: Int) {
 		var sceneName: String = inputs[1].get();
 
+		if (sceneName == null) return;
+
 		#if arm_json
 		sceneName += ".json";
 		#end

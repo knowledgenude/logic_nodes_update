@@ -4,7 +4,7 @@ class GetMeshNode(ArmLogicTreeNode):
     """Returns the mesh of the given object."""
 
     bl_idname = 'LNGetMeshNode'
-    bl_label = 'Get Object Mesh'
+    bl_label = 'Get Mesh'
     arm_section = 'props'
     arm_version = 1
 

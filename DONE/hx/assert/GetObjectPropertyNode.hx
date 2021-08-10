@@ -2,7 +2,13 @@ package armory.logicnode;
 
 import iron.object.Object;
 
-class GetPropertyNode extends LogicNode {
+/*
+This file was previously GetPropertyNode.hx and was renamed to be updated
+Original author: luboslenco
+Contributor(s): MoritzBrueckner
+*/
+
+class GetObjectPropertyNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

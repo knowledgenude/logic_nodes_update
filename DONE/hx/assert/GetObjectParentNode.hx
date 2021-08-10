@@ -2,7 +2,10 @@ package armory.logicnode;
 
 import iron.object.Object;
 
-class GetParentNode extends LogicNode {
+// This file was previously GetParentNode.hx and was renamed to be updated
+// Original author: luboslenco
+
+class GetObjectParentNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

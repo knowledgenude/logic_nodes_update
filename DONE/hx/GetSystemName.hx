@@ -12,7 +12,7 @@ class GetSystemName extends LogicNode {
 		var systemName: String = System.systemId;
 
 		return switch (from) {
-			default: false;
+			default: null;
 			case 0: systemName;
 			case 1: equalsCI(systemName, 'Windows');
 			case 2: equalsCI(systemName, 'Linux');

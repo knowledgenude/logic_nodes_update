@@ -12,7 +12,7 @@ class GetCursorStateNode extends LogicNode {
 		var mouse = Input.getMouse();
 
 		return switch (from) {
-			default: false;
+			default: null;
 			case 0: mouse.hidden && mouse.locked;
 			case 1: mouse.hidden;
 			case 2: mouse.locked;

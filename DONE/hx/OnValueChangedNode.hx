@@ -17,11 +17,14 @@ class OnValueChangedNode extends LogicNode {
 
 		if (currentValue != v) {
 			currentValue = v;
+
 			runOutput(1); // Changed
 
 			if (!init) {
 				initialValue = v;
+
 				runOutput(0); // Initial value changed
+
 				init = true;
 			
 			} else {

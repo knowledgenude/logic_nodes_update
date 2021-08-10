@@ -1,6 +1,6 @@
 from arm.logicnode.arm_nodes import *
 
-class GetLocationNode(ArmLogicTreeNode):
+class GetObjectLocationNode(ArmLogicTreeNode):
     """Get the location of the given object in world coordinates.
 
     @input Parent Relative: If enabled, transforms the world coordinates into object parent local coordinates
@@ -10,7 +10,7 @@ class GetLocationNode(ArmLogicTreeNode):
     @seeNode Vector to Object Orientation
     """
 
-    bl_idname = 'LNGetLocationNode'
+    bl_idname = 'LNGetObjectLocationNode'
     bl_label = 'Get Object Location'
     arm_section = 'location'
     arm_version = 2

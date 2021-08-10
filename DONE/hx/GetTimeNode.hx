@@ -12,8 +12,11 @@ class GetTimeNode extends LogicNode {
 	}
 
 	override function get(from: Int): Dynamic {
-		if (from == 0) return Time.time();
-		else if (from == 1) return Time.delta;
-		else return Time.realDelta;
+		return switch (from) {
+			default: null;
+			case 0: Time.time();
+			case 1: Time.delta;
+			case 2: Time.realDelta;
+		}
 	}
 }
