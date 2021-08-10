@@ -25,6 +25,15 @@
 	String Contains
 	Get Global Object
 	Get Trait Information
+	Self Object
+	Switch Output
+	Send Event To Object
+	Set Object Location
+	Set Object Scale
+	Stop Speaker
+	Vector Clamp
+	Mix Vector
+	While True
 
 * Removed Is False node and Is True node, because Branch node is a more complete version of these
 * Removed deprecated nodes
