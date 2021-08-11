@@ -35,6 +35,16 @@
 	Mix Vector
 	While True
 	Trace
+	Get Object Material
+	Get Object Mesh
+	Get Object Trait
+	Get Object Transform
+	Invert Boolean
+	Pause Speaker
+	PlaySpeaker
+	StopSpeaker
+	Play Sound
+	Select Value
 
 * Removed Is False node and Is True node, because Branch node is a more complete version of these
 * Removed deprecated nodes
