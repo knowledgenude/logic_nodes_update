@@ -34,6 +34,7 @@
 	Vector Clamp
 	Mix Vector
 	While True
+	Trace
 
 * Removed Is False node and Is True node, because Branch node is a more complete version of these
 * Removed deprecated nodes

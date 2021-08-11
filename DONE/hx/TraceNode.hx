@@ -1,6 +1,12 @@
 package armory.logicnode;
 
-class PrintNode extends LogicNode {
+/*
+This file was previously PrintNode.hx and was renamed to be updated
+Author: luboslenco
+Contributor(s): greyheron
+*/
+
+class TraceNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

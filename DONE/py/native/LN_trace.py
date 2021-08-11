@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class PrintNode(ArmLogicTreeNode):
-    """Print the given value to the console."""
+class TraceNode(ArmLogicTreeNode):
+    """Trace the given value to the console."""
 
-    bl_idname = 'LNPrintNode'
-    bl_label = 'Print'
+    bl_idname = 'LNTraceNode'
+    bl_label = 'Trace'
     arm_version = 1
 
     def arm_init(self, context):
