@@ -8,7 +8,7 @@ class PauseSpeakerNode(ArmLogicTreeNode):
     @seeNode Stop Speaker
     """
 
-    bl_idname = 'LNPauseSoundNode'
+    bl_idname = 'LNPauseSpeakerNode'
     bl_label = 'Pause Speaker'
     arm_version = 1
 

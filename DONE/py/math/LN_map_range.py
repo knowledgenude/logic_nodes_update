@@ -10,6 +10,8 @@ class MapRangeNode(ArmLogicTreeNode):
     bl_label = 'Map Range'
     arm_version = 1
 
+    property1: HaxeBoolProperty('property0', name='Map Clamped', default=True)
+
     def arm_init(self, context):
         self.add_input('ArmFloatSocket', 'Value', default_value=1.0)
         self.add_input('ArmFloatSocket', 'From Min')
@@ -18,3 +20,6 @@ class MapRangeNode(ArmLogicTreeNode):
         self.add_input('ArmFloatSocket', 'To Max', default_value=1.0)
 
         self.add_output('ArmFloatSocket', 'Result')
+
+    def draw_buttons(self, context, layout):
+        layout.prop(self, 'property0')

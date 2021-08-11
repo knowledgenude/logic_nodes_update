@@ -26,7 +26,7 @@ class PlaySoundNode(ArmLogicTreeNode):
         (this controls the pitch and the playback speed).
     """
 
-    bl_idname = 'LNPlaySoundRawNode'
+    bl_idname = 'LNPlaySoundNode'
     bl_label = 'Play Sound'
     bl_width_default = 200
     arm_version = 1

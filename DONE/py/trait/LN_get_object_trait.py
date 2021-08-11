@@ -1,10 +1,9 @@
 from arm.logicnode.arm_nodes import *
 
-class GetTraitNode(ArmLogicTreeNode):
-    """Searches for a trait with the specified name which is applied to the
-    given object and returns that trait."""
+class GetObjectTraitNode(ArmLogicTreeNode):
+    """Returns the trait that the given object own with the specified name."""
 
-    bl_idname = 'LNGetTraitNode'
+    bl_idname = 'LNGetObjectTraitNode'
     bl_label = 'Get Object Trait'
     arm_version = 1
 

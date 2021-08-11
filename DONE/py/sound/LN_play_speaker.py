@@ -8,7 +8,7 @@ class PlaySpeakerNode(ArmLogicTreeNode):
     @seeNode Play Speaker
     """
 
-    bl_idname = 'LNPlaySoundNode'
+    bl_idname = 'LNPlaySpeakerNode'
     bl_label = 'Play Speaker'
     arm_version = 1
 

@@ -14,10 +14,10 @@ class OnUpdateNode(ArmLogicTreeNode):
     arm_version = 1
     property0: HaxeEnumProperty(
         'property0',
-        items = [('Update', 'Update', 'Update'),
-                 ('Late Update', 'Late Update', 'Late Update'),
-                 ('Physics Pre-Update', 'Physics Pre-Update', 'Physics Pre-Update')],
-        name='On', default='Update')
+        items = [('update', 'Update', 'Update'),
+                 ('late update', 'Late Update', 'Late Update'),
+                 ('physics pre-update', 'Physics Pre-Update', 'Physics Pre-Update')],
+        name='On', default='update')
 
     def arm_init(self, context):
         self.add_output('ArmNodeSocketAction', 'Out')

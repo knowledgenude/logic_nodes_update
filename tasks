@@ -5,6 +5,7 @@
 * Rename Canvas nodes
 * Rename array nodes
 * Rename input nodes
+* Replace Sleep node by Delay node with retrigger checkbox
 
 Notes:
 Review Set Parent Bone node, it doesn't looks that clear to use

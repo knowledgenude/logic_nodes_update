@@ -1,11 +1,11 @@
 from arm.logicnode.arm_nodes import *
 
-class GetTransformNode(ArmLogicTreeNode):
+class GetObjectTransformNode(ArmLogicTreeNode):
     """Returns the transformation of the given object. An object's
     transform consists of vectors describing its global location,
     rotation and scale."""
 
-    bl_idname = 'LNGetTransformNode'
+    bl_idname = 'LNGetObjectTransformNode'
     bl_label = 'Get Object Transform'
     arm_version = 1
 
