@@ -1,7 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class TraceNode(ArmLogicTreeNode):
-    """Trace the given value to the console."""
+    """Traces the given value to the console."""
 
     bl_idname = 'LNTraceNode'
     bl_label = 'Trace'
