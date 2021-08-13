@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class ArrayGetNode(ArmLogicTreeNode):
-    """Returns the value of the given array at the given index."""
+class GetArrayValueNode(ArmLogicTreeNode):
+    """Returns the value of the given array index."""
 
-    bl_idname = 'LNArrayGetNode'
-    bl_label = 'Array Get'
+    bl_idname = 'LNGetArrayValueNode'
+    bl_label = 'Get Array Value'
     arm_version = 1
 
     def arm_init(self, context):

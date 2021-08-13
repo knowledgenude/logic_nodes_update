@@ -1,6 +1,9 @@
 package armory.logicnode;
 
-class ArrayRemoveNode extends LogicNode {
+// This file was previously ArrayRemoveValueNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class RemoveArrayValueNode extends LogicNode {
 
  	var removedValue: Dynamic = null;
 
@@ -12,11 +15,10 @@ class ArrayRemoveNode extends LogicNode {
 		var ar: Array<Dynamic> = inputs[1].get();
 		if (ar == null) return;
 
-		var i: Int = inputs[2].get();
-		if (i < 0) i = ar.length + i;
+		var val: Dynamic = inputs[2].get();
 
-		removedValue = ar[i];
-		ar.splice(i, 1);
+		removedValue = val;
+		ar.remove(val);
 
 		runOutput(0);
 	}

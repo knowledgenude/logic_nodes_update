@@ -1,8 +1,13 @@
 package armory.logicnode;
 
-class ArrayNode extends LogicNode {
+import iron.object.Object;
 
-	public var value: Array<Dynamic> = [];
+// This file was previously ArrayObjectNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class ObjectArrayNode extends LogicNode {
+
+	public var value: Array<Object> = [];
 	var initialized = false;
 
 	public function new(tree: LogicTree) {
@@ -13,7 +18,7 @@ class ArrayNode extends LogicNode {
 		if (!initialized) {
 			initialized = true;
 			for (inp in inputs) {
-				var val: Dynamic = inp.get();
+				var val: Object = inp.get();
 				value.push(val);
 			}
 		}

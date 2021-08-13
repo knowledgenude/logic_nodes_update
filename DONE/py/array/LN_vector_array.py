@@ -1,15 +1,15 @@
 from arm.logicnode.arm_nodes import *
 
-class FloatArrayNode(ArmLogicTreeNode):
-    """Stores an array of float elements as a variable."""
+class VectorArrayNode(ArmLogicTreeNode):
+    """Stores an array of vector elements as a variable."""
 
-    bl_idname = 'LNArrayFloatNode'
-    bl_label = 'Array Float'
+    bl_idname = 'LNVectorArrayNode'
+    bl_label = 'Vector Array'
     arm_version = 1
     arm_section = 'variable'
 
     def __init__(self):
-        super(FloatArrayNode, self).__init__()
+        super(VectorArrayNode, self).__init__()
         array_nodes[str(id(self))] = self
 
     def arm_init(self, context):
@@ -21,7 +21,7 @@ class FloatArrayNode(ArmLogicTreeNode):
 
         op = row.operator('arm.node_add_input', text='New', icon='PLUS', emboss=True)
         op.node_index = str(id(self))
-        op.socket_type = 'ArmFloatSocket'
+        op.socket_type = 'ArmVectorSocket'
         op2 = row.operator('arm.node_remove_input', text='', icon='X', emboss=True)
         op2.node_index = str(id(self))
 

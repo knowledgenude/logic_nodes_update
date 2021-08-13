@@ -1,15 +1,15 @@
 from arm.logicnode.arm_nodes import *
 
-class ColorArrayNode(ArmLogicTreeNode):
-    """Stores an array of color elements as a variable."""
+class ObjectArrayNode(ArmLogicTreeNode):
+    """Stores an array of object elements as a variable."""
 
-    bl_idname = 'LNArrayColorNode'
-    bl_label = 'Array Color'
+    bl_idname = 'LNObjectArrayNode'
+    bl_label = 'Object Array'
     arm_version = 1
     arm_section = 'variable'
 
     def __init__(self):
-        super(ColorArrayNode, self).__init__()
+        super(ObjectArrayNode, self).__init__()
         array_nodes[str(id(self))] = self
 
     def arm_init(self, context):
@@ -21,7 +21,7 @@ class ColorArrayNode(ArmLogicTreeNode):
 
         op = row.operator('arm.node_add_input', text='New', icon='PLUS', emboss=True)
         op.node_index = str(id(self))
-        op.socket_type = 'ArmColorSocket'
+        op.socket_type = 'ArmNodeSocketObject'
         op2 = row.operator('arm.node_remove_input', text='', icon='X', emboss=True)
         op2.node_index = str(id(self))
 

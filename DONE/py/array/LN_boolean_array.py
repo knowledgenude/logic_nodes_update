@@ -1,15 +1,15 @@
 from arm.logicnode.arm_nodes import *
 
-class ObjectArrayNode(ArmLogicTreeNode):
-    """Stores an array of object elements as a variable."""
+class BooleanArrayNode(ArmLogicTreeNode):
+    """Stores an array of boolean elements as a variable."""
 
-    bl_idname = 'LNArrayObjectNode'
-    bl_label = 'Array Object'
+    bl_idname = 'LNBooleanArrayNode'
+    bl_label = 'Boolean Array'
     arm_version = 1
     arm_section = 'variable'
 
     def __init__(self):
-        super(ObjectArrayNode, self).__init__()
+        super(BooleanArrayNode, self).__init__()
         array_nodes[str(id(self))] = self
 
     def arm_init(self, context):
@@ -21,7 +21,7 @@ class ObjectArrayNode(ArmLogicTreeNode):
 
         op = row.operator('arm.node_add_input', text='New', icon='PLUS', emboss=True)
         op.node_index = str(id(self))
-        op.socket_type = 'ArmNodeSocketObject'
+        op.socket_type = 'ArmBoolSocket'
         op2 = row.operator('arm.node_remove_input', text='', icon='X', emboss=True)
         op2.node_index = str(id(self))
 

@@ -45,6 +45,7 @@
 	StopSpeaker
 	Play Sound
 	Select Value
+	Various Array nodes
 
 * Removed Is False node and Is True node, because Branch node is a more complete version of these
 * Removed deprecated nodes

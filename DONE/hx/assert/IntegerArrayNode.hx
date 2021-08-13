@@ -1,10 +1,11 @@
 package armory.logicnode;
 
-import iron.math.Vec4;
+// This file was previously ArrayIntegerNode.hx and was renamed to be updated
+// Author: luboslenco
 
-class ArrayVectorNode extends LogicNode {
+class IntegerArrayNode extends LogicNode {
 
-	public var value: Array<Vec4> = [];
+	public var value: Array<Int> = [];
 	var initialized = false;
 
 	public function new(tree: LogicTree) {
@@ -15,7 +16,7 @@ class ArrayVectorNode extends LogicNode {
 		if (!initialized) {
 			initialized = true;
 			for (inp in inputs) {
-				var val: Vec4 = inp.get();
+				var val: Int = inp.get();
 				value.push(val);
 			}
 		}

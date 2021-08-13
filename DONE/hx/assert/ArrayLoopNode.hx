@@ -17,6 +17,7 @@ class ArrayLoopNode extends LogicNode {
 		for (val in ar) {
 			value = val;
 			index++;
+
 			runOutput(0);
 
 			if (tree.loopBreak) {
@@ -24,6 +25,7 @@ class ArrayLoopNode extends LogicNode {
 				break;
 			}
 		}
+
 		runOutput(3);
 	}
 

@@ -1,19 +1,21 @@
 from arm.logicnode.arm_nodes import *
 
-class ArrayAddNode(ArmLogicTreeNode):
+class ArrayPushNode(ArmLogicTreeNode):
     """Adds the given value to the given array.
 
     @input Array: the array to manipulate.
     @input Modify Original: if `false`, the input array is copied before adding the value.
     @input Unique Values: if `true`, values may occur only once in that array (only primitive data types are supported).
+    
+    @see [Haxe API](https://api.haxe.org/Array.html#pop)
     """
 
-    bl_idname = 'LNArrayAddNode'
+    bl_idname = 'LNArrayPushNode'
     bl_label = 'Array Add'
     arm_version = 1
 
     def __init__(self):
-        super(ArrayAddNode, self).__init__()
+        super(ArrayPushNode, self).__init__()
         array_nodes[str(id(self))] = self
 
     def arm_init(self, context):

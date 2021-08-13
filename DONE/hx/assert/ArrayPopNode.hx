@@ -1,6 +1,6 @@
 package armory.logicnode;
 
-class ArrayLengthNode extends LogicNode {
+class ArrayPopNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);
@@ -8,6 +8,9 @@ class ArrayLengthNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		var ar: Array<Dynamic> = inputs[0].get();
-		return ar != null ? ar.length : 0;
+
+		if (ar == null) return null;
+
+		return ar.pop();
 	}
 }

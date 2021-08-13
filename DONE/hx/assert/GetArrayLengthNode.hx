@@ -1,6 +1,9 @@
 package armory.logicnode;
 
-class ArrayPopNode extends LogicNode {
+// This file was previously ArrayLengthNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class GetArrayLengthNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);
@@ -8,8 +11,7 @@ class ArrayPopNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		var ar: Array<Dynamic> = inputs[0].get();
-		if (ar == null) return null;
 
-		return ar.pop();
+		return ar != null ? ar.length : 0;
 	}
 }

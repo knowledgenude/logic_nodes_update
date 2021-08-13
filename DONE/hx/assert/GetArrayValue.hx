@@ -1,6 +1,9 @@
 package armory.logicnode;
 
-class ArrayGetNode extends LogicNode {
+// This file was previously ArrayGetNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class GetArrayValueNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);
@@ -8,7 +11,6 @@ class ArrayGetNode extends LogicNode {
 
 	override function get(from: Int): Dynamic {
 		var ar: Array<Dynamic> = inputs[0].get();
-
 		if (ar == null) return null;
 
 		var i: Int = inputs[1].get();

@@ -1,8 +1,11 @@
 package armory.logicnode;
 
-class ArrayIntegerNode extends LogicNode {
+// This file was previously ArrayStringNode.hx and was renamed to be updated
+// Author: luboslenco
 
-	public var value: Array<Int> = [];
+class StringArrayNode extends LogicNode {
+
+	public var value: Array<String> = [];
 	var initialized = false;
 
 	public function new(tree: LogicTree) {
@@ -13,7 +16,7 @@ class ArrayIntegerNode extends LogicNode {
 		if (!initialized) {
 			initialized = true;
 			for (inp in inputs) {
-				var val: Int = inp.get();
+				var val: String = inp.get();
 				value.push(val);
 			}
 		}

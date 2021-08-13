@@ -1,10 +1,11 @@
 package armory.logicnode;
 
-import iron.math.Vec4;
+// This file was previously ArrayBooleanNode.hx and was renamed to be updated
+// Author: luboslenco
 
-class ArrayColorNode extends LogicNode {
+class BooleanArrayNode extends LogicNode {
 
-	public var value: Array<Vec4> = [];
+	public var value: Array<Bool> = [];
 	var initialized = false;
 
 	public function new(tree: LogicTree) {
@@ -15,7 +16,7 @@ class ArrayColorNode extends LogicNode {
 		if (!initialized) {
 			initialized = true;
 			for (inp in inputs) {
-				var val: Vec4 = inp.get();
+				var val: Bool = inp.get();
 				value.push(val);
 			}
 		}

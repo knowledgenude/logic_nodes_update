@@ -6,6 +6,7 @@
 * Rename array nodes
 * Rename input nodes
 * Replace Sleep node by Delay node with retrigger checkbox
+* Rename On Contact Array node and Has Contact Array node
 
 Notes:
 Review Set Parent Bone node, it doesn't looks that clear to use

@@ -1,8 +1,11 @@
 package armory.logicnode;
 
-class ArrayStringNode extends LogicNode {
+// This file was previously ArrayFloatNode.hx and was renamed to be updated
+// Author: luboslenco
 
-	public var value: Array<String> = [];
+class FloatArrayNode extends LogicNode {
+
+	public var value: Array<Float> = [];
 	var initialized = false;
 
 	public function new(tree: LogicTree) {
@@ -13,7 +16,7 @@ class ArrayStringNode extends LogicNode {
 		if (!initialized) {
 			initialized = true;
 			for (inp in inputs) {
-				var val: String = inp.get();
+				var val: Float = inp.get();
 				value.push(val);
 			}
 		}

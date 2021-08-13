@@ -1,6 +1,9 @@
 package armory.logicnode;
 
-class ArraySetNode extends LogicNode {
+// This file was previously ArraySetNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class SetArrayIndexNode extends LogicNode {
 
 	public function new(tree: LogicTree) {
 		super(tree);

@@ -1,8 +1,13 @@
 package armory.logicnode;
 
-class ArrayFloatNode extends LogicNode {
+import iron.math.Vec4;
 
-	public var value: Array<Float> = [];
+// This file was previously ArrayColorNode.hx and was renamed to be updated
+// Author: luboslenco
+
+class ColorArrayNode extends LogicNode {
+
+	public var value: Array<Vec4> = [];
 	var initialized = false;
 
 	public function new(tree: LogicTree) {
@@ -13,7 +18,7 @@ class ArrayFloatNode extends LogicNode {
 		if (!initialized) {
 			initialized = true;
 			for (inp in inputs) {
-				var val: Float = inp.get();
+				var val: Vec4 = inp.get();
 				value.push(val);
 			}
 		}

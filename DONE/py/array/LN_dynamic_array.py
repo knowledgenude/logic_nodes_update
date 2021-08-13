@@ -1,10 +1,10 @@
 from arm.logicnode.arm_nodes import *
 
-class ArrayNode(ArmLogicTreeNode):
-    """Stores the given array as a variable."""
+class DynamicArrayNode(ArmLogicTreeNode):
+    """Stores the given array of dynamic elements as a variable."""
 
-    bl_idname = 'LNArrayNode'
-    bl_label = 'Array Dynamic'
+    bl_idname = 'LNDynamicArrayNode'
+    bl_label = 'Dynamic Array'
     arm_version = 1
     arm_section = 'variable'
 

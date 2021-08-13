@@ -1,6 +1,12 @@
 package armory.logicnode;
 
-class ArrayAddNode extends LogicNode {
+/*
+This file was previously ArrayAddNode.hx and was renamed to be updated
+Author: luboslenco
+Contributor(s): MoritzBrueckner
+*/
+
+class ArrayPushNode extends LogicNode {
 
 	var ar: Array<Dynamic>;
 
