@@ -1,10 +1,7 @@
 from arm.logicnode.arm_nodes import *
 
 class ArrayLoopNode(ArmLogicTreeNode):
-    """Loops through each item of the given array.
-    
-    @see [Haxe API](https://api.haxe.org/Array.html#pop)
-    """
+    """Loops through each item of the given array."""
 
     bl_idname = 'LNArrayLoopNode'
     bl_label = 'Array Loop'

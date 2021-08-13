@@ -3,7 +3,7 @@ from arm.logicnode.arm_nodes import *
 class ArrayContainsNode(ArmLogicTreeNode):
     """Returns whether the given array contains the given value.
     
-    @see [Haxe API](https://api.haxe.org/Array.html#pop)
+    @see [Haxe API](https://api.haxe.org/Array.html#contains)
     """
 
     bl_idname = 'LNArrayContainsNode'

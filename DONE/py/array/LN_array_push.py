@@ -7,7 +7,7 @@ class ArrayPushNode(ArmLogicTreeNode):
     @input Modify Original: if `false`, the input array is copied before adding the value.
     @input Unique Values: if `true`, values may occur only once in that array (only primitive data types are supported).
     
-    @see [Haxe API](https://api.haxe.org/Array.html#pop)
+    @see [Haxe API](https://api.haxe.org/Array.html#push)
     """
 
     bl_idname = 'LNArrayPushNode'

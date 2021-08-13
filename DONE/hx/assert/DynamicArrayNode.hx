@@ -1,6 +1,6 @@
 package armory.logicnode;
 
-// This file was previously DynamicArrayNode.hx and was renamed to be updated
+// This file was previously ArrayNode.hx and was renamed to be updated
 // Author: luboslenco
 
 class DynamicArrayNode extends LogicNode {
