@@ -1,10 +1,7 @@
 * Change FOV nodes to use degrees, since most people isn't used to radians while talking about FOV
 	* Add milimeters option to FOV nodes
-* Improve Is Null nodes
 * Remake input map nodes to use action and axis separately
 * Rename Canvas nodes
-* Rename array nodes
-* Rename input nodes
 * Replace Sleep node by Delay node with retrigger checkbox
 * Rename On Contact Array node and Has Contact Array node
 

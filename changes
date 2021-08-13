@@ -57,3 +57,4 @@
 * Merged World Vector To Local Space node and Vector To Object Orientation node into Convert Vector node
 * Merged Rad to Deg node and Deg to Rad node into Convert Angle node
 * Merged Is Null node and Is Not Null node into Is Null node
+* Added RGB inputs to Color node
