@@ -3,7 +3,7 @@ package armory.logicnode;
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
 
-class CanvasGetCheckboxNode extends LogicNode {
+class GetCanvasVisibleNode extends LogicNode {
 
 	var canvas: CanvasScript;
 
@@ -11,8 +11,10 @@ class CanvasGetCheckboxNode extends LogicNode {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	override function get(from: Int): Dynamic { // Null<Bool>
+		var element: String = inputs[0].get();
+
 		if (canvas == null) canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
 		if (canvas == null || !canvas.ready) return null;
@@ -20,9 +22,9 @@ class CanvasGetCheckboxNode extends LogicNode {
 		// This Try/Catch hacks around an issue where the handles are
 		// not created yet, even though canvas.ready is true.
 		try {
-			return canvas.getHandle(inputs[0].get()).selected;
+			return canvas.getElement(element).visible;
 		}
 		catch (e: Dynamic) { return null; }
 	}
-#end
+	#end
 }

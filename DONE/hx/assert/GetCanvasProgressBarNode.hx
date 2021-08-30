@@ -3,17 +3,18 @@ package armory.logicnode;
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
 
-class CanvasGetRotationNode extends LogicNode {
+class GetCanvasProgressBarNode extends LogicNode {
 
 	var canvas: CanvasScript;
 	var element: String;
-	var rad: Float;
+	var at: Int;
+	var max: Int;
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	function update() {
 		if (!canvas.ready) return;
 		tree.removeUpdate(update);
@@ -21,7 +22,8 @@ class CanvasGetRotationNode extends LogicNode {
 		var e = canvas.getElement(element);
 		if (e == null) return;
 
-		rad = e.rotation;
+		at = canvas.getElement(element).progress_at;
+        max = canvas.getElement(element).progress_total;
 		runOutput(0);
 	}
 
@@ -35,8 +37,9 @@ class CanvasGetRotationNode extends LogicNode {
 		update();
 	}
     override function get(from: Int): Dynamic {
-		if (from == 1) return rad;
+		if (from == 1) return at;
+		else if (from == 2) return max;
 		else return 0;
 	}
-#end
+	#end
 }

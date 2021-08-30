@@ -3,34 +3,34 @@ package armory.logicnode;
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
 
-class CanvasSetCheckBoxNode extends LogicNode {
+class SetCanvasScaleNode extends LogicNode {
 
 	var canvas: CanvasScript;
 	var element: String;
-	var value: Bool;
+	var height: Int;
+    var width: Int;
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	function update() {
 		if (!canvas.ready) return;
+		tree.removeUpdate(update);
 
-		// This Try/Catch hacks around an issue where the handles are
-		// not created yet, even though canvas.ready is true.
-		try {
-			canvas.getHandle(element).selected = value;
-			tree.removeUpdate(update);
+		var e = canvas.getElement(element);
+		if (e != null) {
+			e.height = height;
+			e.width = width;
 		}
-		catch (e: Dynamic) {}
-
 		runOutput(0);
 	}
 
 	override function run(from: Int) {
 		element = inputs[1].get();
-		value = inputs[2].get();
+		height = inputs[2].get();
+        width = inputs[3].get();
 		canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
 
@@ -38,5 +38,5 @@ class CanvasSetCheckBoxNode extends LogicNode {
 		tree.notifyOnUpdate(update);
 		update();
 	}
-#end
+	#end
 }

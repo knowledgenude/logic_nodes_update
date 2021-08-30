@@ -2,10 +2,8 @@ package armory.logicnode;
 
 import iron.math.Vec4;
 import iron.object.Object;
-#if arm_physics
 import armory.trait.physics.RigidBody;
 import armory.trait.physics.PhysicsWorld;
-#end
 
 class PickLocationNode extends LogicNode {
 

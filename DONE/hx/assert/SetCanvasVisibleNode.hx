@@ -3,34 +3,28 @@ package armory.logicnode;
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
 
-class CanvasSetScaleNode extends LogicNode {
+class SetCanvasVisibleNode extends LogicNode {
 
 	var canvas: CanvasScript;
 	var element: String;
-	var height: Int;
-    var width: Int;
+	var visible: Bool;
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	function update() {
 		if (!canvas.ready) return;
 		tree.removeUpdate(update);
 
-		var e = canvas.getElement(element);
-		if (e != null) {
-			e.height = height;
-			e.width = width;
-		}
+		var element = canvas.getElement(element);
+		if (element != null) element.visible = this.visible;
 		runOutput(0);
 	}
-
 	override function run(from: Int) {
 		element = inputs[1].get();
-		height = inputs[2].get();
-        width = inputs[3].get();
+		visible = inputs[2].get();
 		canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
 
@@ -38,5 +32,5 @@ class CanvasSetScaleNode extends LogicNode {
 		tree.notifyOnUpdate(update);
 		update();
 	}
-#end
+	#end
 }

@@ -2,37 +2,35 @@ package armory.logicnode;
 
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
-import kha.Color;
 
-class CanvasSetTextColorNode extends LogicNode {
+class CanvasSetProgressBarNode extends LogicNode {
 
 	var canvas: CanvasScript;
 	var element: String;
-	var r: Float;
-	var g: Float;
-	var b: Float;
-	var a: Float;
+	var newAt: Int;
+    var newMax: Int;
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	function update() {
 		if (!canvas.ready) return;
 		tree.removeUpdate(update);
 
 		var e = canvas.getElement(element);
-		if (e != null) e.color_text = Color.fromFloats(r, g, b, a);
+		if (e != null) {
+			e.progress_at = newAt;
+			e.progress_total = newMax;
+		}
 		runOutput(0);
 	}
 
 	override function run(from: Int) {
 		element = inputs[1].get();
-		r = inputs[2].get();
-		g = inputs[3].get();
-		b = inputs[4].get();
-		a = inputs[5].get();
+		newAt = inputs[2].get();
+        newMax = inputs[3].get();
 		canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
 
@@ -40,5 +38,5 @@ class CanvasSetTextColorNode extends LogicNode {
 		tree.notifyOnUpdate(update);
 		update();
 	}
-#end
+	#end
 }

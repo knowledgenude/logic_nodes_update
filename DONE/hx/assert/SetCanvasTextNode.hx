@@ -3,32 +3,29 @@ package armory.logicnode;
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
 
-class CanvasGetPBNode extends LogicNode {
+class SetCanvasTextNode extends LogicNode {
 
 	var canvas: CanvasScript;
 	var element: String;
-	var at: Int;
-	var max: Int;
+	var text: String;
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	function update() {
 		if (!canvas.ready) return;
 		tree.removeUpdate(update);
 
 		var e = canvas.getElement(element);
-		if (e == null) return;
-
-		at = canvas.getElement(element).progress_at;
-        max = canvas.getElement(element).progress_total;
+		if (e != null) e.text = text;
 		runOutput(0);
 	}
 
 	override function run(from: Int) {
 		element = inputs[1].get();
+		text = Std.string(inputs[2].get());
 		canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
 
@@ -36,10 +33,5 @@ class CanvasGetPBNode extends LogicNode {
 		tree.notifyOnUpdate(update);
 		update();
 	}
-    override function get(from: Int): Dynamic {
-		if (from == 1) return at;
-		else if (from == 2) return max;
-		else return 0;
-	}
-#end
+	#end
 }

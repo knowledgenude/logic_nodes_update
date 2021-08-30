@@ -1,9 +1,7 @@
 package armory.logicnode;
 
 import iron.object.Object;
-#if arm_physics
 import armory.trait.physics.RigidBody;
-#end
 
 class GetRigidBodyDataNode extends LogicNode {
 

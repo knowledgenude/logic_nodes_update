@@ -1,36 +1,34 @@
 package armory.logicnode;
 
 import iron.Scene;
+#if arm_ui
 import armory.trait.internal.CanvasScript;
+#end
 
-class CanvasSetSliderNode extends LogicNode {
+class GetCanvasRotationNode extends LogicNode {
 
 	var canvas: CanvasScript;
 	var element: String;
-	var value: Float;
+	var rad: Float;
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	function update() {
 		if (!canvas.ready) return;
+		tree.removeUpdate(update);
 
-		// This Try/Catch hacks around an issue where the handles are
-		// not created yet, even though canvas.ready is true.
-		try {
-			canvas.getHandle(element).value = value;
-			tree.removeUpdate(update);
-		}
-		catch (e: Dynamic) {}
+		var e = canvas.getElement(element);
+		if (e == null) return;
 
+		rad = e.rotation;
 		runOutput(0);
 	}
 
 	override function run(from: Int) {
 		element = inputs[1].get();
-		value = inputs[2].get();
 		canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
 
@@ -38,5 +36,9 @@ class CanvasSetSliderNode extends LogicNode {
 		tree.notifyOnUpdate(update);
 		update();
 	}
-#end
+    override function get(from: Int): Dynamic {
+		if (from == 1) return rad;
+		else return 0;
+	}
+	#end
 }

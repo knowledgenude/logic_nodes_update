@@ -3,7 +3,7 @@ package armory.logicnode;
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
 
-class CanvasGetPositionNode extends LogicNode {
+class GetCanvasPositionNode extends LogicNode {
 
 	var canvas: CanvasScript;
 
@@ -11,7 +11,7 @@ class CanvasGetPositionNode extends LogicNode {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	override function get(from: Int): Dynamic { // Null<Int>
 		if (canvas == null) canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
@@ -24,5 +24,5 @@ class CanvasGetPositionNode extends LogicNode {
 		}
 		catch (e: Dynamic) { return null; }
 	}
-#end
+	#end
 }

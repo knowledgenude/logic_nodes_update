@@ -3,28 +3,29 @@ package armory.logicnode;
 import iron.Scene;
 import armory.trait.internal.CanvasScript;
 
-class CanvasSetVisibleNode extends LogicNode {
+class SetCanvasRotationNode extends LogicNode {
 
 	var canvas: CanvasScript;
 	var element: String;
-	var visible: Bool;
+	var rad: Float;
 
 	public function new(tree: LogicTree) {
 		super(tree);
 	}
 
-#if arm_ui
+	#if arm_ui
 	function update() {
 		if (!canvas.ready) return;
 		tree.removeUpdate(update);
 
-		var element = canvas.getElement(element);
-		if (element != null) element.visible = this.visible;
+		var e = canvas.getElement(element);
+		if (e != null) e.rotation = rad;
 		runOutput(0);
 	}
+
 	override function run(from: Int) {
 		element = inputs[1].get();
-		visible = inputs[2].get();
+		rad = inputs[2].get();
 		canvas = Scene.active.getTrait(CanvasScript);
 		if (canvas == null) canvas = Scene.active.camera.getTrait(CanvasScript);
 
@@ -32,5 +33,5 @@ class CanvasSetVisibleNode extends LogicNode {
 		tree.notifyOnUpdate(update);
 		update();
 	}
-#end
+	#end
 }

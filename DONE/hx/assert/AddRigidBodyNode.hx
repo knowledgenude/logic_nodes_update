@@ -1,11 +1,8 @@
 package armory.logicnode;
 
 import iron.object.Object;
-
-#if arm_physics
 import armory.trait.physics.RigidBody;
 import armory.trait.physics.bullet.RigidBody.Shape;
-#end
 
 class AddRigidBodyNode extends LogicNode {
 

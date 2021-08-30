@@ -2,9 +2,7 @@ package armory.logicnode;
 
 import iron.math.Vec4;
 import iron.object.Object;
-#if arm_physics
 import armory.trait.physics.RigidBody;
-#end
 
 class ApplyImpulseNode extends LogicNode {
 
